@@ -1,0 +1,3933 @@
+[
+    {
+        "1C Enterprise": {
+            "type": "programming",
+            "color": "#814CCC",
+            "extensions": [
+                ".bsl",
+                ".os"
+            ],
+            "tm_scope": "source.bsl",
+            "ace_mode": "text",
+            "language_id": 0,
+            "function_def": "procedure myProcedure;",
+            "import_statement": "use MyClass;",
+            "print_statement": "Message(\"my_text\");"
+        }
+    },
+    {
+        "2-Dimensional Array": {
+            "type": "data",
+            "color": "#38761D",
+            "extensions": [
+                ".2da"
+            ],
+            "tm_scope": "source.2da",
+            "ace_mode": "text",
+            "language_id": 387204628
+        }
+    },
+    {
+        "4D": {
+            "type": "programming",
+            "color": "#004289",
+            "extensions": [
+                ".4dm"
+            ],
+            "tm_scope": "source.4dm",
+            "ace_mode": "text",
+            "language_id": 577529595,
+            "function_def": "var myMethod;",
+            "import_statement": "import MyLibrary;",
+            "print_statement": "ALERT(\"my_text\")"
+        }
+    },
+    {
+        "ABAP": {
+            "type": "programming",
+            "color": "#E8274B",
+            "extensions": [
+                ".abap"
+            ],
+            "tm_scope": "source.abap",
+            "ace_mode": "abap",
+            "language_id": 1,
+            "function_def": "FORM my_form.",
+            "import_statement": "INCLUDE my_program.",
+            "print_statement": "WRITE: 'my_text'."
+        }
+    },
+    {
+        "ABAP CDS": {
+            "type": "programming",
+            "color": "#555e25",
+            "extensions": [
+                ".asddls"
+            ],
+            "tm_scope": "source.abapcds",
+            "language_id": 452681853,
+            "ace_mode": "text",
+            "function_def": "entity my_entity as select from my_table;",
+            "import_statement": "using namespace my_namespace;",
+            "print_statement": "SELECT * INTO my_table WHERE value = 'my_text'."
+        }
+    },
+    {
+        "ABNF": {
+            "type": "data",
+            "ace_mode": "text",
+            "extensions": [
+                ".abnf"
+            ],
+            "tm_scope": "source.abnf",
+            "language_id": 429
+        }
+    },
+    {
+        "AGS Script": {
+            "type": "programming",
+            "color": "#B9D9FF",
+            "aliases": [
+                "ags"
+            ],
+            "extensions": [
+                ".asc",
+                ".ash"
+            ],
+            "tm_scope": "source.c++",
+            "ace_mode": "c_cpp",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-c++src",
+            "language_id": 2,
+            "function_def": "function my_function() { }",
+            "import_statement": "import MyLibrary;",
+            "print_statement": "Display(\"my_text\");"
+        }
+    },
+    {
+        "AIDL": {
+            "type": "programming",
+            "color": "#34EB6B",
+            "tm_scope": "source.aidl",
+            "extensions": [
+                ".aidl"
+            ],
+            "ace_mode": "text",
+            "interpreters": [
+                "aidl"
+            ],
+            "language_id": 451700185,
+            "function_def": "interface MyService { void my_function(); }",
+            "import_statement": "import my.library;",
+            "print_statement": "System.out.println(\"my_text\");"
+        }
+    },
+    {
+        "AL": {
+            "type": "programming",
+            "color": "#3AA2B5",
+            "extensions": [
+                ".al"
+            ],
+            "tm_scope": "source.al",
+            "ace_mode": "text",
+            "language_id": 658971832,
+            "function_def": "procedure MyProcedure;",
+            "import_statement": "codeunit MyCodeunit;",
+            "print_statement": "Message('my_text');"
+        }
+    },
+    {
+        "AMPL": {
+            "type": "programming",
+            "color": "#E6EFBB",
+            "extensions": [
+                ".ampl",
+                ".mod"
+            ],
+            "tm_scope": "source.ampl",
+            "ace_mode": "text",
+            "language_id": 3,
+            "function_def": "function my_function; solve;",
+            "import_statement": "include my_library.mod;",
+            "print_statement": "display 'my_text';"
+        }
+    },
+    {
+        "ANTLR": {
+            "type": "programming",
+            "color": "#9DC3FF",
+            "extensions": [
+                ".g4"
+            ],
+            "tm_scope": "source.antlr",
+            "ace_mode": "text",
+            "language_id": 4,
+            "function_def": "grammar MyGrammar;",
+            "import_statement": "import MyLexer;",
+            "print_statement": "// Printing is not typically used in grammars"
+        }
+    },
+    {
+        "API Blueprint": {
+            "type": "markup",
+            "color": "#2ACCA8",
+            "ace_mode": "markdown",
+            "extensions": [
+                ".apib"
+            ],
+            "tm_scope": "text.html.markdown.source.gfm.apib",
+            "language_id": 5,
+            "function_def": "# My API Function",
+            "import_statement": "FORMAT: 1A",
+            "print_statement": "// API documentation does not execute prints"
+        }
+    },
+    {
+        "API Blueprint": {
+            "type": "markup",
+            "color": "#2ACCA8",
+            "ace_mode": "markdown",
+            "extensions": [
+                ".apib"
+            ],
+            "tm_scope": "text.html.markdown.source.gfm.apib",
+            "language_id": 5,
+            "function_def": "# My API Function",
+            "import_statement": "FORMAT: 1A",
+            "print_statement": "// API documentation does not execute prints"
+        }
+    },
+    {
+        "APL": {
+            "type": "programming",
+            "color": "#5A8164",
+            "extensions": [
+                ".apl",
+                ".dyalog"
+            ],
+            "interpreters": [
+                "apl",
+                "aplx",
+                "dyalog"
+            ],
+            "tm_scope": "source.apl",
+            "ace_mode": "text",
+            "codemirror_mode": "apl",
+            "codemirror_mime_type": "text/apl",
+            "language_id": 6,
+            "function_def": "{ ⍵ ← ⍵ × 2 }",
+            "import_statement": "⎕FIO[1]←'my_library'",
+            "print_statement": "'my_text'"
+        }
+    },
+    {
+        "ASL": {
+            "type": "programming",
+            "ace_mode": "text",
+            "extensions": [
+                ".asl",
+                ".dsl"
+            ],
+            "tm_scope": "source.asl",
+            "language_id": 124996147,
+            "function_def": "Method myMethod;",
+            "import_statement": "Include myScript;",
+            "print_statement": "Output('my_text');"
+        }
+    },
+    {
+        "ASN.1": {
+            "type": "data",
+            "extensions": [
+                ".asn",
+                ".asn1"
+            ],
+            "tm_scope": "source.asn",
+            "ace_mode": "text",
+            "codemirror_mode": "asn.1",
+            "codemirror_mime_type": "text/x-ttcn-asn",
+            "language_id": 7,
+            "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+            "import_statement": "IMPORTS MyType FROM MyLibrary;",
+            "print_statement": "// ASN.1 is used for schema definitions, not printing"
+        }
+    },
+    {
+        "ASP.NET": {
+            "type": "programming",
+            "tm_scope": "text.html.asp",
+            "color": "#9400ff",
+            "aliases": [
+                "aspx",
+                "aspx-vb"
+            ],
+            "extensions": [
+                ".asax",
+                ".ascx",
+                ".ashx",
+                ".asmx",
+                ".aspx",
+                ".axd"
+            ],
+            "ace_mode": "text",
+            "codemirror_mode": "htmlembedded",
+            "codemirror_mime_type": "application/x-aspx",
+            "language_id": 564186416,
+            "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+            "import_statement": "using MyNamespace;",
+            "print_statement": "Response.Write(\"my_text\");"
+        }
+    },
+    {
+        "ATS": {
+            "type": "programming",
+            "color": "#1ac620",
+            "aliases": [
+                "ats2"
+            ],
+            "extensions": [
+                ".dats",
+                ".hats",
+                ".sats"
+            ],
+            "tm_scope": "source.ats",
+            "ace_mode": "ocaml",
+            "language_id": 9,
+            "function_def": "fun myFunction(): void = { ... }",
+            "import_statement": "staload \"my_library.sats\"",
+            "print_statement": "print(\"my_text\")"
+        }
+    },
+    {
+        "ActionScript": {
+            "type": "programming",
+            "tm_scope": "source.actionscript.3",
+            "color": "#882B0F",
+            "aliases": [
+                "actionscript 3",
+                "actionscript3",
+                "as3"
+            ],
+            "extensions": [
+                ".as"
+            ],
+            "ace_mode": "actionscript",
+            "language_id": 10,
+            "function_def": "function myFunction(): void { }",
+            "import_statement": "import MyPackage.*;",
+            "print_statement": "trace(\"my_text\");"
+        }
+    },
+    {
+        "Ada": {
+            "type": "programming",
+            "color": "#02f88c",
+            "extensions": [
+                ".adb",
+                ".ada",
+                ".ads"
+            ],
+            "aliases": [
+                "ada95",
+                "ada2005"
+            ],
+            "tm_scope": "source.ada",
+            "ace_mode": "ada",
+            "language_id": 11,
+            "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+            "import_statement": "with My_Package;",
+            "print_statement": "Put_Line(\"my_text\");"
+        }
+    },
+    {
+        "Adblock Filter List": {
+            "type": "data",
+            "color": "#800000",
+            "ace_mode": "text",
+            "extensions": [
+                ".txt"
+            ],
+            "aliases": [
+                "ad block filters",
+                "ad block",
+                "adb",
+                "adblock"
+            ],
+            "tm_scope": "text.adblock",
+            "language_id": 884614762
+        }
+    },
+    {
+        "Adobe Font Metrics": {
+            "type": "data",
+            "color": "#fa0f00",
+            "tm_scope": "source.afm",
+            "extensions": [
+                ".afm"
+            ],
+            "aliases": [
+                "acfm",
+                "adobe composite font metrics",
+                "adobe multiple font metrics",
+                "amfm"
+            ],
+            "ace_mode": "text",
+            "language_id": 147198098
+        }
+    },
+    {
+        "Agda": {
+            "type": "programming",
+            "color": "#315665",
+            "extensions": [
+                ".agda"
+            ],
+            "tm_scope": "source.agda",
+            "ace_mode": "text",
+            "language_id": 12,
+            "function_def": "myFunction : A -> B -> C",
+            "import_statement": "open import MyModule",
+            "print_statement": "putStrLn \"my_text\""
+        }
+    },
+    {
+        "Alloy": {
+            "type": "programming",
+            "color": "#64C800",
+            "extensions": [
+                ".als"
+            ],
+            "tm_scope": "source.alloy",
+            "ace_mode": "text",
+            "language_id": 13,
+            "function_def": "sig MySig { myFunction: set MyType }",
+            "import_statement": "// Alloy does not use imports",
+            "print_statement": "// Alloy is declarative and does not print"
+        }
+    },
+    {
+        "Alpine Abuild": {
+            "type": "programming",
+            "color": "#0D597F",
+            "group": "Shell",
+            "aliases": [
+                "abuild",
+                "apkbuild"
+            ],
+            "filenames": [
+                "APKBUILD"
+            ],
+            "tm_scope": "source.shell",
+            "ace_mode": "sh",
+            "codemirror_mode": "shell",
+            "codemirror_mime_type": "text/x-sh",
+            "language_id": 14,
+            "function_def": "my_function() { ... }",
+            "import_statement": ". my_library.sh",
+            "print_statement": "echo \"my_text\""
+        }
+    },
+    {
+        "Altium Designer": {
+            "type": "data",
+            "color": "#A89663",
+            "aliases": [
+                "altium"
+            ],
+            "extensions": [
+                ".OutJob",
+                ".PcbDoc",
+                ".PrjPCB",
+                ".SchDoc"
+            ],
+            "tm_scope": "source.ini",
+            "ace_mode": "ini",
+            "language_id": 187772328
+        }
+    },
+    {
+        "AngelScript": {
+            "type": "programming",
+            "color": "#C7D7DC",
+            "extensions": [
+                ".as",
+                ".angelscript"
+            ],
+            "tm_scope": "source.angelscript",
+            "ace_mode": "text",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-c++src",
+            "language_id": 389477596,
+            "function_def": "void myFunction() { }",
+            "import_statement": "import void myFunction() from \"myLibrary\";",
+            "print_statement": "Print(\"my_text\");"
+        }
+    },
+    {
+        "Ant Build System": {
+            "type": "data",
+            "color": "#A9157E",
+            "tm_scope": "text.xml.ant",
+            "filenames": [
+                "ant.xml",
+                "build.xml"
+            ],
+            "ace_mode": "xml",
+            "codemirror_mode": "xml",
+            "codemirror_mime_type": "application/xml",
+            "language_id": 15
+        }
+    },
+    {
+        "Antlers": {
+            "type": "markup",
+            "color": "#ff269e",
+            "extensions": [
+                ".antlers.html",
+                ".antlers.php",
+                ".antlers.xml"
+            ],
+            "tm_scope": "text.html.statamic",
+            "ace_mode": "text",
+            "language_id": 1067292663,
+            "function_def": "{{ my_function() }}",
+            "import_statement": "// Antlers does not use imports",
+            "print_statement": "{{ 'my_text' }}"
+        }
+    },
+    {
+        "ApacheConf": {
+            "type": "data",
+            "color": "#d12127",
+            "aliases": [
+                "aconf",
+                "apache"
+            ],
+            "extensions": [
+                ".apacheconf",
+                ".vhost"
+            ],
+            "filenames": [
+                ".htaccess",
+                "apache2.conf",
+                "httpd.conf"
+            ],
+            "tm_scope": "source.apache-config",
+            "ace_mode": "apache_conf",
+            "language_id": 16,
+            "function_def": "# Functions not applicable in config files",
+            "import_statement": "Include my_config.conf",
+            "print_statement": "# Directives output information"
+        }
+    },
+    {
+        "Apex": {
+            "type": "programming",
+            "color": "#1797c0",
+            "extensions": [
+                ".cls",
+                ".trigger"
+            ],
+            "tm_scope": "source.apex",
+            "ace_mode": "java",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-java",
+            "language_id": 17,
+            "function_def": "public void myFunction() { }",
+            "import_statement": "import MyNamespace.MyClass;",
+            "print_statement": "System.debug('my_text');"
+        }
+    },
+    {
+        "APL": {
+            "type": "programming",
+            "color": "#5A8164",
+            "extensions": [
+                ".apl",
+                ".dyalog"
+            ],
+            "interpreters": [
+                "apl",
+                "aplx",
+                "dyalog"
+            ],
+            "tm_scope": "source.apl",
+            "ace_mode": "text",
+            "codemirror_mode": "apl",
+            "codemirror_mime_type": "text/apl",
+            "language_id": 6,
+            "function_def": "{ ⍵ ← ⍵ × 2 }",
+            "import_statement": "⎕FIO[1]←'my_library'",
+            "print_statement": "'my_text'"
+        }
+    },
+    {
+        "ASL": {
+            "type": "programming",
+            "ace_mode": "text",
+            "extensions": [
+                ".asl",
+                ".dsl"
+            ],
+            "tm_scope": "source.asl",
+            "language_id": 124996147,
+            "function_def": "Method myMethod;",
+            "import_statement": "Include myScript;",
+            "print_statement": "Output('my_text');"
+        }
+    },
+    {
+        "ASN.1": {
+            "type": "data",
+            "extensions": [
+                ".asn",
+                ".asn1"
+            ],
+            "tm_scope": "source.asn",
+            "ace_mode": "text",
+            "codemirror_mode": "asn.1",
+            "codemirror_mime_type": "text/x-ttcn-asn",
+            "language_id": 7,
+            "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+            "import_statement": "IMPORTS MyType FROM MyLibrary;",
+            "print_statement": "// ASN.1 is used for schema definitions, not printing"
+        }
+    },
+    {
+        "ASP.NET": {
+            "type": "programming",
+            "tm_scope": "text.html.asp",
+            "color": "#9400ff",
+            "aliases": [
+                "aspx",
+                "aspx-vb"
+            ],
+            "extensions": [
+                ".asax",
+                ".ascx",
+                ".ashx",
+                ".asmx",
+                ".aspx",
+                ".axd"
+            ],
+            "ace_mode": "text",
+            "codemirror_mode": "htmlembedded",
+            "codemirror_mime_type": "application/x-aspx",
+            "language_id": 564186416,
+            "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+            "import_statement": "using MyNamespace;",
+            "print_statement": "Response.Write(\"my_text\");"
+        }
+    },
+    {
+        "ATS": {
+            "type": "programming",
+            "color": "#1ac620",
+            "aliases": [
+                "ats2"
+            ],
+            "extensions": [
+                ".dats",
+                ".hats",
+                ".sats"
+            ],
+            "tm_scope": "source.ats",
+            "ace_mode": "ocaml",
+            "language_id": 9,
+            "function_def": "fun myFunction(): void = { ... }",
+            "import_statement": "staload \"my_library.sats\"",
+            "print_statement": "print(\"my_text\")"
+        }
+    },
+    {
+        "ActionScript": {
+            "type": "programming",
+            "tm_scope": "source.actionscript.3",
+            "color": "#882B0F",
+            "aliases": [
+                "actionscript 3",
+                "actionscript3",
+                "as3"
+            ],
+            "extensions": [
+                ".as"
+            ],
+            "ace_mode": "actionscript",
+            "language_id": 10,
+            "function_def": "function myFunction(): void { }",
+            "import_statement": "import MyPackage.*;",
+            "print_statement": "trace(\"my_text\");"
+        }
+    },
+    {
+        "Ada": {
+            "type": "programming",
+            "color": "#02f88c",
+            "extensions": [
+                ".adb",
+                ".ada",
+                ".ads"
+            ],
+            "aliases": [
+                "ada95",
+                "ada2005"
+            ],
+            "tm_scope": "source.ada",
+            "ace_mode": "ada",
+            "language_id": 11,
+            "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+            "import_statement": "with My_Package;",
+            "print_statement": "Put_Line(\"my_text\");"
+        }
+    },
+    {
+        "Adobe Font Metrics": {
+            "type": "data",
+            "color": "#fa0f00",
+            "tm_scope": "source.afm",
+            "extensions": [
+                ".afm"
+            ],
+            "aliases": [
+                "acfm",
+                "adobe composite font metrics",
+                "adobe multiple font metrics",
+                "amfm"
+            ],
+            "ace_mode": "text",
+            "language_id": 147198098
+        }
+    },
+    {
+        "Agda": {
+            "type": "programming",
+            "color": "#315665",
+            "extensions": [
+                ".agda"
+            ],
+            "tm_scope": "source.agda",
+            "ace_mode": "text",
+            "language_id": 12,
+            "function_def": "myFunction : A -> B -> C",
+            "import_statement": "open import MyModule",
+            "print_statement": "putStrLn \"my_text\""
+        }
+    },
+    {
+        "Alloy": {
+            "type": "programming",
+            "color": "#64C800",
+            "extensions": [
+                ".als"
+            ],
+            "tm_scope": "source.alloy",
+            "ace_mode": "text",
+            "language_id": 13,
+            "function_def": "sig MySig { myFunction: set MyType }",
+            "import_statement": "// Alloy does not use imports",
+            "print_statement": "// Alloy is declarative and does not print"
+        }
+    },
+    {
+        "Alpine Abuild": {
+            "type": "programming",
+            "color": "#0D597F",
+            "group": "Shell",
+            "aliases": [
+                "abuild",
+                "apkbuild"
+            ],
+            "filenames": [
+                "APKBUILD"
+            ],
+            "tm_scope": "source.shell",
+            "ace_mode": "sh",
+            "codemirror_mode": "shell",
+            "codemirror_mime_type": "text/x-sh",
+            "language_id": 14,
+            "function_def": "my_function() { ... }",
+            "import_statement": ". my_library.sh",
+            "print_statement": "echo \"my_text\""
+        }
+    },
+    {
+        "Altium Designer": {
+            "type": "data",
+            "color": "#A89663",
+            "aliases": [
+                "altium"
+            ],
+            "extensions": [
+                ".OutJob",
+                ".PcbDoc",
+                ".PrjPCB",
+                ".SchDoc"
+            ],
+            "tm_scope": "source.ini",
+            "ace_mode": "ini",
+            "language_id": 187772328
+        }
+    },
+    {
+        "AngelScript": {
+            "type": "programming",
+            "color": "#C7D7DC",
+            "extensions": [
+                ".as",
+                ".angelscript"
+            ],
+            "tm_scope": "source.angelscript",
+            "ace_mode": "text",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-c++src",
+            "language_id": 389477596,
+            "function_def": "void myFunction() { }",
+            "import_statement": "import void myFunction() from \"myLibrary\";",
+            "print_statement": "Print(\"my_text\");"
+        }
+    },
+    {
+        "Ant Build System": {
+            "type": "data",
+            "color": "#A9157E",
+            "tm_scope": "text.xml.ant",
+            "filenames": [
+                "ant.xml",
+                "build.xml"
+            ],
+            "ace_mode": "xml",
+            "codemirror_mode": "xml",
+            "codemirror_mime_type": "application/xml",
+            "language_id": 15
+        }
+    },
+    {
+        "Antlers": {
+            "type": "markup",
+            "color": "#ff269e",
+            "extensions": [
+                ".antlers.html",
+                ".antlers.php",
+                ".antlers.xml"
+            ],
+            "tm_scope": "text.html.statamic",
+            "ace_mode": "text",
+            "language_id": 1067292663,
+            "function_def": "{{ my_function() }}",
+            "import_statement": "// Antlers does not use imports",
+            "print_statement": "{{ 'my_text' }}"
+        }
+    },
+    {
+        "ApacheConf": {
+            "type": "data",
+            "color": "#d12127",
+            "aliases": [
+                "aconf",
+                "apache"
+            ],
+            "extensions": [
+                ".apacheconf",
+                ".vhost"
+            ],
+            "filenames": [
+                ".htaccess",
+                "apache2.conf",
+                "httpd.conf"
+            ],
+            "tm_scope": "source.apache-config",
+            "ace_mode": "apache_conf",
+            "language_id": 16,
+            "function_def": "# Functions not applicable in config files",
+            "import_statement": "Include my_config.conf",
+            "print_statement": "# Directives output information"
+        }
+    },
+    {
+        "Apex": {
+            "type": "programming",
+            "color": "#1797c0",
+            "extensions": [
+                ".cls",
+                ".trigger"
+            ],
+            "tm_scope": "source.apex",
+            "ace_mode": "java",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-java",
+            "language_id": 17,
+            "function_def": "public void myFunction() { }",
+            "import_statement": "import MyNamespace.MyClass;",
+            "print_statement": "System.debug('my_text');"
+        }
+    },
+    {
+        "APL": {
+            "type": "programming",
+            "color": "#5A8164",
+            "extensions": [
+                ".apl",
+                ".dyalog"
+            ],
+            "interpreters": [
+                "apl",
+                "aplx",
+                "dyalog"
+            ],
+            "tm_scope": "source.apl",
+            "ace_mode": "text",
+            "codemirror_mode": "apl",
+            "codemirror_mime_type": "text/apl",
+            "language_id": 6,
+            "function_def": "{ ⍵ ← ⍵ × 2 }",
+            "import_statement": "⎕FIO[1]←'my_library'",
+            "print_statement": "'my_text'"
+        }
+    },
+    {
+        "ASL": {
+            "type": "programming",
+            "ace_mode": "text",
+            "extensions": [
+                ".asl",
+                ".dsl"
+            ],
+            "tm_scope": "source.asl",
+            "language_id": 124996147,
+            "function_def": "Method myMethod;",
+            "import_statement": "Include myScript;",
+            "print_statement": "Output('my_text');"
+        }
+    },
+    {
+        "ASN.1": {
+            "type": "data",
+            "extensions": [
+                ".asn",
+                ".asn1"
+            ],
+            "tm_scope": "source.asn",
+            "ace_mode": "text",
+            "codemirror_mode": "asn.1",
+            "codemirror_mime_type": "text/x-ttcn-asn",
+            "language_id": 7,
+            "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+            "import_statement": "IMPORTS MyType FROM MyLibrary;",
+            "print_statement": "// ASN.1 is used for schema definitions, not printing"
+        }
+    },
+    {
+        "ASP.NET": {
+            "type": "programming",
+            "tm_scope": "text.html.asp",
+            "color": "#9400ff",
+            "aliases": [
+                "aspx",
+                "aspx-vb"
+            ],
+            "extensions": [
+                ".asax",
+                ".ascx",
+                ".ashx",
+                ".asmx",
+                ".aspx",
+                ".axd"
+            ],
+            "ace_mode": "text",
+            "codemirror_mode": "htmlembedded",
+            "codemirror_mime_type": "application/x-aspx",
+            "language_id": 564186416,
+            "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+            "import_statement": "using MyNamespace;",
+            "print_statement": "Response.Write(\"my_text\");"
+        }
+    },
+    {
+        "ATS": {
+            "type": "programming",
+            "color": "#1ac620",
+            "aliases": [
+                "ats2"
+            ],
+            "extensions": [
+                ".dats",
+                ".hats",
+                ".sats"
+            ],
+            "tm_scope": "source.ats",
+            "ace_mode": "ocaml",
+            "language_id": 9,
+            "function_def": "fun myFunction(): void = { ... }",
+            "import_statement": "staload \"my_library.sats\"",
+            "print_statement": "print(\"my_text\")"
+        }
+    }
+    ,
+    {
+        "ActionScript": {
+            "type": "programming",
+            "tm_scope": "source.actionscript.3",
+            "color": "#882B0F",
+            "aliases": [
+                "actionscript 3",
+                "actionscript3",
+                "as3"
+            ],
+            "extensions": [
+                ".as"
+            ],
+            "ace_mode": "actionscript",
+            "language_id": 10,
+            "function_def": "function myFunction(): void { }",
+            "import_statement": "import MyPackage.*;",
+            "print_statement": "trace(\"my_text\");"
+        }
+    },
+    {
+        "Ada": {
+            "type": "programming",
+            "color": "#02f88c",
+            "extensions": [
+                ".adb",
+                ".ada",
+                ".ads"
+            ],
+            "aliases": [
+                "ada95",
+                "ada2005"
+            ],
+            "tm_scope": "source.ada",
+            "ace_mode": "ada",
+            "language_id": 11,
+            "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+            "import_statement": "with My_Package;",
+            "print_statement": "Put_Line(\"my_text\");"
+        }
+    },
+    {
+        "Adblock Filter List": {
+            "type": "data",
+            "color": "#800000",
+            "ace_mode": "text",
+            "extensions": [
+                ".txt"
+            ],
+            "aliases": [
+                "ad block filters",
+                "ad block",
+                "adb",
+                "adblock"
+            ],
+            "tm_scope": "text.adblock",
+            "language_id": 884614762
+        }
+    },
+    {
+        "Adobe Font Metrics": {
+            "type": "data",
+            "color": "#fa0f00",
+            "tm_scope": "source.afm",
+            "extensions": [
+                ".afm"
+            ],
+            "aliases": [
+                "acfm",
+                "adobe composite font metrics",
+                "adobe multiple font metrics",
+                "amfm"
+            ],
+            "ace_mode": "text",
+            "language_id": 147198098
+        }
+    },
+    {
+        "Agda": {
+            "type": "programming",
+            "color": "#315665",
+            "extensions": [
+                ".agda"
+            ],
+            "tm_scope": "source.agda",
+            "ace_mode": "text",
+            "language_id": 12,
+            "function_def": "myFunction : A -> B -> C",
+            "import_statement": "open import MyModule",
+            "print_statement": "putStrLn \"my_text\""
+        }
+    },
+    {
+        "Alloy": {
+            "type": "programming",
+            "color": "#64C800",
+            "extensions": [
+                ".als"
+            ],
+            "tm_scope": "source.alloy",
+            "ace_mode": "text",
+            "language_id": 13,
+            "function_def": "sig MySig { myFunction: set MyType }",
+            "import_statement": "// Alloy does not use imports",
+            "print_statement": "// Alloy is declarative and does not print"
+        }
+    },
+    {
+        "Alpine Abuild": {
+            "type": "programming",
+            "color": "#0D597F",
+            "group": "Shell",
+            "aliases": [
+                "abuild",
+                "apkbuild"
+            ],
+            "filenames": [
+                "APKBUILD"
+            ],
+            "tm_scope": "source.shell",
+            "ace_mode": "sh",
+            "codemirror_mode": "shell",
+            "codemirror_mime_type": "text/x-sh",
+            "language_id": 14,
+            "function_def": "my_function() { ... }",
+            "import_statement": ". my_library.sh",
+            "print_statement": "echo \"my_text\""
+        }
+    },
+    {
+        "Altium Designer": {
+            "type": "data",
+            "color": "#A89663",
+            "aliases": [
+                "altium"
+            ],
+            "extensions": [
+                ".OutJob",
+                ".PcbDoc",
+                ".PrjPCB",
+                ".SchDoc"
+            ],
+            "tm_scope": "source.ini",
+            "ace_mode": "ini",
+            "language_id": 187772328
+        }
+    },
+    {
+        "AngelScript": {
+            "type": "programming",
+            "color": "#C7D7DC",
+            "extensions": [
+                ".as",
+                ".angelscript"
+            ],
+            "tm_scope": "source.angelscript",
+            "ace_mode": "text",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-c++src",
+            "language_id": 389477596,
+            "function_def": "void myFunction() { }",
+            "import_statement": "import void myFunction() from \"myLibrary\";",
+            "print_statement": "Print(\"my_text\");"
+        }
+    },
+    {
+        "Ant Build System": {
+            "type": "data",
+            "color": "#A9157E",
+            "tm_scope": "text.xml.ant",
+            "filenames": [
+                "ant.xml",
+                "build.xml"
+            ],
+            "ace_mode": "xml",
+            "codemirror_mode": "xml",
+            "codemirror_mime_type": "application/xml",
+            "language_id": 15
+        }
+    },
+    {
+        "Antlers": {
+            "type": "markup",
+            "color": "#ff269e",
+            "extensions": [
+                ".antlers.html",
+                ".antlers.php",
+                ".antlers.xml"
+            ],
+            "tm_scope": "text.html.statamic",
+            "ace_mode": "text",
+            "language_id": 1067292663,
+            "function_def": "{{ my_function() }}",
+            "import_statement": "// Antlers does not use imports",
+            "print_statement": "{{ 'my_text' }}"
+        }
+    },
+    {
+        "ApacheConf": {
+            "type": "data",
+            "color": "#d12127",
+            "aliases": [
+                "aconf",
+                "apache"
+            ],
+            "extensions": [
+                ".apacheconf",
+                ".vhost"
+            ],
+            "filenames": [
+                ".htaccess",
+                "apache2.conf",
+                "httpd.conf"
+            ],
+            "tm_scope": "source.apache-config",
+            "ace_mode": "apache_conf",
+            "language_id": 16,
+            "function_def": "# Functions not applicable in config files",
+            "import_statement": "Include my_config.conf",
+            "print_statement": "# Directives output information"
+        }
+    },
+    {
+        "Apex": {
+            "type": "programming",
+            "color": "#1797c0",
+            "extensions": [
+                ".cls",
+                ".trigger"
+            ],
+            "tm_scope": "source.apex",
+            "ace_mode": "java",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-java",
+            "language_id": 17,
+            "function_def": "public void myFunction() { }",
+            "import_statement": "import MyNamespace.MyClass;",
+            "print_statement": "System.debug('my_text');"
+        }
+    }
+    ,
+    {
+        "APL": {
+            "type": "programming",
+            "color": "#5A8164",
+            "extensions": [
+                ".apl",
+                ".dyalog"
+            ],
+            "interpreters": [
+                "apl",
+                "aplx",
+                "dyalog"
+            ],
+            "tm_scope": "source.apl",
+            "ace_mode": "text",
+            "codemirror_mode": "apl",
+            "codemirror_mime_type": "text/apl",
+            "language_id": 6,
+            "function_def": "{ ⍵ ← ⍵ × 2 }",
+            "import_statement": "⎕FIO[1]←'my_library'",
+            "print_statement": "'my_text'"
+        }
+    },
+    {
+        "ASL": {
+            "type": "programming",
+            "ace_mode": "text",
+            "extensions": [
+                ".asl",
+                ".dsl"
+            ],
+            "tm_scope": "source.asl",
+            "language_id": 124996147,
+            "function_def": "Method myMethod;",
+            "import_statement": "Include myScript;",
+            "print_statement": "Output('my_text');"
+        }
+    },
+    {
+        "ASN.1": {
+            "type": "data",
+            "extensions": [
+                ".asn",
+                ".asn1"
+            ],
+            "tm_scope": "source.asn",
+            "ace_mode": "text",
+            "codemirror_mode": "asn.1",
+            "codemirror_mime_type": "text/x-ttcn-asn",
+            "language_id": 7,
+            "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+            "import_statement": "IMPORTS MyType FROM MyLibrary;",
+            "print_statement": "// ASN.1 is used for schema definitions, not printing"
+        }
+    },
+    {
+        "ASP.NET": {
+            "type": "programming",
+            "tm_scope": "text.html.asp",
+            "color": "#9400ff",
+            "aliases": [
+                "aspx",
+                "aspx-vb"
+            ],
+            "extensions": [
+                ".asax",
+                ".ascx",
+                ".ashx",
+                ".asmx",
+                ".aspx",
+                ".axd"
+            ],
+            "ace_mode": "text",
+            "codemirror_mode": "htmlembedded",
+            "codemirror_mime_type": "application/x-aspx",
+            "language_id": 564186416,
+            "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+            "import_statement": "using MyNamespace;",
+            "print_statement": "Response.Write(\"my_text\");"
+        }
+    },
+    {
+        "ATS": {
+            "type": "programming",
+            "color": "#1ac620",
+            "aliases": [
+                "ats2"
+            ],
+            "extensions": [
+                ".dats",
+                ".hats",
+                ".sats"
+            ],
+            "tm_scope": "source.ats",
+            "ace_mode": "ocaml",
+            "language_id": 9,
+            "function_def": "fun myFunction(): void = { ... }",
+            "import_statement": "staload \"my_library.sats\"",
+            "print_statement": "print(\"my_text\")"
+        }
+    },
+    {
+        "ActionScript": {
+            "type": "programming",
+            "tm_scope": "source.actionscript.3",
+            "color": "#882B0F",
+            "aliases": [
+                "actionscript 3",
+                "actionscript3",
+                "as3"
+            ],
+            "extensions": [
+                ".as"
+            ],
+            "ace_mode": "actionscript",
+            "language_id": 10,
+            "function_def": "function myFunction(): void { }",
+            "import_statement": "import MyPackage.*;",
+            "print_statement": "trace(\"my_text\");"
+        }
+    },
+    {
+        "Ada": {
+            "type": "programming",
+            "color": "#02f88c",
+            "extensions": [
+                ".adb",
+                ".ada",
+                ".ads"
+            ],
+            "aliases": [
+                "ada95",
+                "ada2005"
+            ],
+            "tm_scope": "source.ada",
+            "ace_mode": "ada",
+            "language_id": 11,
+            "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+            "import_statement": "with My_Package;",
+            "print_statement": "Put_Line(\"my_text\");"
+        }
+    },
+    {
+        "Adblock Filter List": {
+            "type": "data",
+            "color": "#800000",
+            "ace_mode": "text",
+            "extensions": [
+                ".txt"
+            ],
+            "aliases": [
+                "ad block filters",
+                "ad block",
+                "adb",
+                "adblock"
+            ],
+            "tm_scope": "text.adblock",
+            "language_id": 884614762
+        }
+    },
+    {
+        "Adobe Font Metrics": {
+            "type": "data",
+            "color": "#fa0f00",
+            "tm_scope": "source.afm",
+            "extensions": [
+                ".afm"
+            ],
+            "aliases": [
+                "acfm",
+                "adobe composite font metrics",
+                "adobe multiple font metrics",
+                "amfm"
+            ],
+            "ace_mode": "text",
+            "language_id": 147198098
+        }
+    },
+    {
+        "Agda": {
+            "type": "programming",
+            "color": "#315665",
+            "extensions": [
+                ".agda"
+            ],
+            "tm_scope": "source.agda",
+            "ace_mode": "text",
+            "language_id": 12,
+            "function_def": "myFunction : A -> B -> C",
+            "import_statement": "open import MyModule",
+            "print_statement": "putStrLn \"my_text\""
+        }
+    },
+    {
+        "Alloy": {
+            "type": "programming",
+            "color": "#64C800",
+            "extensions": [
+                ".als"
+            ],
+            "tm_scope": "source.alloy",
+            "ace_mode": "text",
+            "language_id": 13,
+            "function_def": "sig MySig { myFunction: set MyType }",
+            "import_statement": "// Alloy does not use imports",
+            "print_statement": "// Alloy is declarative and does not print"
+        }
+    },
+    {
+        "Alpine Abuild": {
+            "type": "programming",
+            "color": "#0D597F",
+            "group": "Shell",
+            "aliases": [
+                "abuild",
+                "apkbuild"
+            ],
+            "filenames": [
+                "APKBUILD"
+            ],
+            "tm_scope": "source.shell",
+            "ace_mode": "sh",
+            "codemirror_mode": "shell",
+            "codemirror_mime_type": "text/x-sh",
+            "language_id": 14,
+            "function_def": "my_function() { ... }",
+            "import_statement": ". my_library.sh",
+            "print_statement": "echo \"my_text\""
+        }
+    },
+    {
+        "Altium Designer": {
+            "type": "data",
+            "color": "#A89663",
+            "aliases": [
+                "altium"
+            ],
+            "extensions": [
+                ".OutJob",
+                ".PcbDoc",
+                ".PrjPCB",
+                ".SchDoc"
+            ],
+            "tm_scope": "source.ini",
+            "ace_mode": "ini",
+            "language_id": 187772328
+        }
+    },
+    {
+        "AngelScript": {
+            "type": "programming",
+            "color": "#C7D7DC",
+            "extensions": [
+                ".as",
+                ".angelscript"
+            ],
+            "tm_scope": "source.angelscript",
+            "ace_mode": "text",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-c++src",
+            "language_id": 389477596,
+            "function_def": "void myFunction() { }",
+            "import_statement": "import void myFunction() from \"myLibrary\";",
+            "print_statement": "Print(\"my_text\");"
+        }
+    },
+    {
+        "Ant Build System": {
+            "type": "data",
+            "color": "#A9157E",
+            "tm_scope": "text.xml.ant",
+            "filenames": [
+                "ant.xml",
+                "build.xml"
+            ],
+            "ace_mode": "xml",
+            "codemirror_mode": "xml",
+            "codemirror_mime_type": "application/xml",
+            "language_id": 15
+        }
+    },
+    {
+        "Antlers": {
+            "type": "markup",
+            "color": "#ff269e",
+            "extensions": [
+                ".antlers.html",
+                ".antlers.php",
+                ".antlers.xml"
+            ],
+            "tm_scope": "text.html.statamic",
+            "ace_mode": "text",
+            "language_id": 1067292663,
+            "function_def": "{{ my_function() }}",
+            "import_statement": "// Antlers does not use imports",
+            "print_statement": "{{ 'my_text' }}"
+        }
+    }
+    ,
+    {
+        "ApacheConf": {
+            "type": "data",
+            "color": "#d12127",
+            "aliases": [
+                "aconf",
+                "apache"
+            ],
+            "extensions": [
+                ".apacheconf",
+                ".vhost"
+            ],
+            "filenames": [
+                ".htaccess",
+                "apache2.conf",
+                "httpd.conf"
+            ],
+            "tm_scope": "source.apache-config",
+            "ace_mode": "apache_conf",
+            "language_id": 16,
+            "function_def": "# Functions not applicable in config files",
+            "import_statement": "Include my_config.conf",
+            "print_statement": "# Directives output information"
+        }
+    },
+    {
+        "Apex": {
+            "type": "programming",
+            "color": "#1797c0",
+            "extensions": [
+                ".cls",
+                ".trigger"
+            ],
+            "tm_scope": "source.apex",
+            "ace_mode": "java",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-java",
+            "language_id": 17,
+            "function_def": "public void myFunction() { }",
+            "import_statement": "import MyNamespace.MyClass;",
+            "print_statement": "System.debug('my_text');"
+        }
+    },
+    {
+        "APL": {
+            "type": "programming",
+            "color": "#5A8164",
+            "extensions": [
+                ".apl",
+                ".dyalog"
+            ],
+            "interpreters": [
+                "apl",
+                "aplx",
+                "dyalog"
+            ],
+            "tm_scope": "source.apl",
+            "ace_mode": "text",
+            "codemirror_mode": "apl",
+            "codemirror_mime_type": "text/apl",
+            "language_id": 6,
+            "function_def": "{ ⍵ ← ⍵ × 2 }",
+            "import_statement": "⎕FIO[1]←'my_library'",
+            "print_statement": "'my_text'"
+        }
+    },
+    {
+        "ASL": {
+            "type": "programming",
+            "ace_mode": "text",
+            "extensions": [
+                ".asl",
+                ".dsl"
+            ],
+            "tm_scope": "source.asl",
+            "language_id": 124996147,
+            "function_def": "Method myMethod;",
+            "import_statement": "Include myScript;",
+            "print_statement": "Output('my_text');"
+        }
+    },
+    {
+        "ASN.1": {
+            "type": "data",
+            "extensions": [
+                ".asn",
+                ".asn1"
+            ],
+            "tm_scope": "source.asn",
+            "ace_mode": "text",
+            "codemirror_mode": "asn.1",
+            "codemirror_mime_type": "text/x-ttcn-asn",
+            "language_id": 7,
+            "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+            "import_statement": "IMPORTS MyType FROM MyLibrary;",
+            "print_statement": "// ASN.1 is used for schema definitions, not printing"
+        }
+    },
+    {
+        "ASP.NET": {
+            "type": "programming",
+            "tm_scope": "text.html.asp",
+            "color": "#9400ff",
+            "aliases": [
+                "aspx",
+                "aspx-vb"
+            ],
+            "extensions": [
+                ".asax",
+                ".ascx",
+                ".ashx",
+                ".asmx",
+                ".aspx",
+                ".axd"
+            ],
+            "ace_mode": "text",
+            "codemirror_mode": "htmlembedded",
+            "codemirror_mime_type": "application/x-aspx",
+            "language_id": 564186416,
+            "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+            "import_statement": "using MyNamespace;",
+            "print_statement": "Response.Write(\"my_text\");"
+        }
+    },
+    {
+        "ATS": {
+            "type": "programming",
+            "color": "#1ac620",
+            "aliases": [
+                "ats2"
+            ],
+            "extensions": [
+                ".dats",
+                ".hats",
+                ".sats"
+            ],
+            "tm_scope": "source.ats",
+            "ace_mode": "ocaml",
+            "language_id": 9,
+            "function_def": "fun myFunction(): void = { ... }",
+            "import_statement": "staload \"my_library.sats\"",
+            "print_statement": "print(\"my_text\")"
+        }
+    },
+    {
+        "ActionScript": {
+            "type": "programming",
+            "tm_scope": "source.actionscript.3",
+            "color": "#882B0F",
+            "aliases": [
+                "actionscript 3",
+                "actionscript3",
+                "as3"
+            ],
+            "extensions": [
+                ".as"
+            ],
+            "ace_mode": "actionscript",
+            "language_id": 10,
+            "function_def": "function myFunction(): void { }",
+            "import_statement": "import MyPackage.*;",
+            "print_statement": "trace(\"my_text\");"
+        }
+    },
+    {
+        "Ada": {
+            "type": "programming",
+            "color": "#02f88c",
+            "extensions": [
+                ".adb",
+                ".ada",
+                ".ads"
+            ],
+            "aliases": [
+                "ada95",
+                "ada2005"
+            ],
+            "tm_scope": "source.ada",
+            "ace_mode": "ada",
+            "language_id": 11,
+            "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+            "import_statement": "with My_Package;",
+            "print_statement": "Put_Line(\"my_text\");"
+        }
+    },
+    {
+        "Adblock Filter List": {
+            "type": "data",
+            "color": "#800000",
+            "ace_mode": "text",
+            "extensions": [
+                ".txt"
+            ],
+            "aliases": [
+                "ad block filters",
+                "ad block",
+                "adb",
+                "adblock"
+            ],
+            "tm_scope": "text.adblock",
+            "language_id": 884614762
+        }
+    },
+    {
+        "Adobe Font Metrics": {
+            "type": "data",
+            "color": "#fa0f00",
+            "tm_scope": "source.afm",
+            "extensions": [
+                ".afm"
+            ],
+            "aliases": [
+                "acfm",
+                "adobe composite font metrics",
+                "adobe multiple font metrics",
+                "amfm"
+            ],
+            "ace_mode": "text",
+            "language_id": 147198098
+        }
+    },
+    {
+        "Agda": {
+            "type": "programming",
+            "color": "#315665",
+            "extensions": [
+                ".agda"
+            ],
+            "tm_scope": "source.agda",
+            "ace_mode": "text",
+            "language_id": 12,
+            "function_def": "myFunction : A -> B -> C",
+            "import_statement": "open import MyModule",
+            "print_statement": "putStrLn \"my_text\""
+        }
+    },
+    {
+        "Alloy": {
+            "type": "programming",
+            "color": "#64C800",
+            "extensions": [
+                ".als"
+            ],
+            "tm_scope": "source.alloy",
+            "ace_mode": "text",
+            "language_id": 13,
+            "function_def": "sig MySig { myFunction: set MyType }",
+            "import_statement": "// Alloy does not use imports",
+            "print_statement": "// Alloy is declarative and does not print"
+        }
+    },
+    {
+        "Alpine Abuild": {
+            "type": "programming",
+            "color": "#0D597F",
+            "group": "Shell",
+            "aliases": [
+                "abuild",
+                "apkbuild"
+            ],
+            "filenames": [
+                "APKBUILD"
+            ],
+            "tm_scope": "source.shell",
+            "ace_mode": "sh",
+            "codemirror_mode": "shell",
+            "codemirror_mime_type": "text/x-sh",
+            "language_id": 14,
+            "function_def": "my_function() { ... }",
+            "import_statement": ". my_library.sh",
+            "print_statement": "echo \"my_text\""
+        }
+    },
+    {
+        "Altium Designer": {
+            "type": "data",
+            "color": "#A89663",
+            "aliases": [
+                "altium"
+            ],
+            "extensions": [
+                ".OutJob",
+                ".PcbDoc",
+                ".PrjPCB",
+                ".SchDoc"
+            ],
+            "tm_scope": "source.ini",
+            "ace_mode": "ini",
+            "language_id": 187772328
+        }
+    },
+    {
+        "AngelScript": {
+            "type": "programming",
+            "color": "#C7D7DC",
+            "extensions": [
+                ".as",
+                ".angelscript"
+            ],
+            "tm_scope": "source.angelscript",
+            "ace_mode": "text",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-c++src",
+            "language_id": 389477596,
+            "function_def": "void myFunction() { }",
+            "import_statement": "import void myFunction() from \"myLibrary\";",
+            "print_statement": "Print(\"my_text\");"
+        }
+    },
+    {
+        "Ant Build System": {
+            "type": "data",
+            "color": "#A9157E",
+            "tm_scope": "text.xml.ant",
+            "filenames": [
+                "ant.xml",
+                "build.xml"
+            ],
+            "ace_mode": "xml",
+            "codemirror_mode": "xml",
+            "codemirror_mime_type": "application/xml",
+            "language_id": 15
+        }
+    }
+    ,
+    {
+        "Antlers": {
+            "type": "markup",
+            "color": "#ff269e",
+            "extensions": [
+                ".antlers.html",
+                ".antlers.php",
+                ".antlers.xml"
+            ],
+            "tm_scope": "text.html.statamic",
+            "ace_mode": "text",
+            "language_id": 1067292663,
+            "function_def": "{{ my_function() }}",
+            "import_statement": "// Antlers does not use imports",
+            "print_statement": "{{ 'my_text' }}"
+        }
+    },
+    {
+        "ApacheConf": {
+            "type": "data",
+            "color": "#d12127",
+            "aliases": [
+                "aconf",
+                "apache"
+            ],
+            "extensions": [
+                ".apacheconf",
+                ".vhost"
+            ],
+            "filenames": [
+                ".htaccess",
+                "apache2.conf",
+                "httpd.conf"
+            ],
+            "tm_scope": "source.apache-config",
+            "ace_mode": "apache_conf",
+            "language_id": 16,
+            "function_def": "# Functions not applicable in config files",
+            "import_statement": "Include my_config.conf",
+            "print_statement": "# Directives output information"
+        }
+    },
+    {
+        "Apex": {
+            "type": "programming",
+            "color": "#1797c0",
+            "extensions": [
+                ".cls",
+                ".trigger"
+            ],
+            "tm_scope": "source.apex",
+            "ace_mode": "java",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-java",
+            "language_id": 17,
+            "function_def": "public void myFunction() { }",
+            "import_statement": "import MyNamespace.MyClass;",
+            "print_statement": "System.debug('my_text');"
+        }
+    },
+    {
+        "APL": {
+            "type": "programming",
+            "color": "#5A8164",
+            "extensions": [
+                ".apl",
+                ".dyalog"
+            ],
+            "interpreters": [
+                "apl",
+                "aplx",
+                "dyalog"
+            ],
+            "tm_scope": "source.apl",
+            "ace_mode": "text",
+            "codemirror_mode": "apl",
+            "codemirror_mime_type": "text/apl",
+            "language_id": 6,
+            "function_def": "{ ⍵ ← ⍵ × 2 }",
+            "import_statement": "⎕FIO[1]←'my_library'",
+            "print_statement": "'my_text'"
+        }
+    },
+    {
+        "ASL": {
+            "type": "programming",
+            "ace_mode": "text",
+            "extensions": [
+                ".asl",
+                ".dsl"
+            ],
+            "tm_scope": "source.asl",
+            "language_id": 124996147,
+            "function_def": "Method myMethod;",
+            "import_statement": "Include myScript;",
+            "print_statement": "Output('my_text');"
+        }
+    },
+    {
+        "ASN.1": {
+            "type": "data",
+            "extensions": [
+                ".asn",
+                ".asn1"
+            ],
+            "tm_scope": "source.asn",
+            "ace_mode": "text",
+            "codemirror_mode": "asn.1",
+            "codemirror_mime_type": "text/x-ttcn-asn",
+            "language_id": 7,
+            "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+            "import_statement": "IMPORTS MyType FROM MyLibrary;",
+            "print_statement": "// ASN.1 is used for schema definitions, not printing"
+        }
+    },
+    {
+        "ASP.NET": {
+            "type": "programming",
+            "tm_scope": "text.html.asp",
+            "color": "#9400ff",
+            "aliases": [
+                "aspx",
+                "aspx-vb"
+            ],
+            "extensions": [
+                ".asax",
+                ".ascx",
+                ".ashx",
+                ".asmx",
+                ".aspx",
+                ".axd"
+            ],
+            "ace_mode": "text",
+            "codemirror_mode": "htmlembedded",
+            "codemirror_mime_type": "application/x-aspx",
+            "language_id": 564186416,
+            "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+            "import_statement": "using MyNamespace;",
+            "print_statement": "Response.Write(\"my_text\");"
+        }
+    },
+    {
+        "ATS": {
+            "type": "programming",
+            "color": "#1ac620",
+            "aliases": [
+                "ats2"
+            ],
+            "extensions": [
+                ".dats",
+                ".hats",
+                ".sats"
+            ],
+            "tm_scope": "source.ats",
+            "ace_mode": "ocaml",
+            "language_id": 9,
+            "function_def": "fun myFunction(): void = { ... }",
+            "import_statement": "staload \"my_library.sats\"",
+            "print_statement": "print(\"my_text\")"
+        }
+    },
+    {
+        "ActionScript": {
+            "type": "programming",
+            "tm_scope": "source.actionscript.3",
+            "color": "#882B0F",
+            "aliases": [
+                "actionscript 3",
+                "actionscript3",
+                "as3"
+            ],
+            "extensions": [
+                ".as"
+            ],
+            "ace_mode": "actionscript",
+            "language_id": 10,
+            "function_def": "function myFunction(): void { }",
+            "import_statement": "import MyPackage.*;",
+            "print_statement": "trace(\"my_text\");"
+        }
+    },
+    {
+        "Ada": {
+            "type": "programming",
+            "color": "#02f88c",
+            "extensions": [
+                ".adb",
+                ".ada",
+                ".ads"
+            ],
+            "aliases": [
+                "ada95",
+                "ada2005"
+            ],
+            "tm_scope": "source.ada",
+            "ace_mode": "ada",
+            "language_id": 11,
+            "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+            "import_statement": "with My_Package;",
+            "print_statement": "Put_Line(\"my_text\");"
+        }
+    }
+    ,
+    {
+        "Adblock Filter List": {
+            "type": "data",
+            "color": "#800000",
+            "ace_mode": "text",
+            "extensions": [
+                ".txt"
+            ],
+            "aliases": [
+                "ad block filters",
+                "ad block",
+                "adb",
+                "adblock"
+            ],
+            "tm_scope": "text.adblock",
+            "language_id": 884614762
+        }
+    },
+    {
+        "Adobe Font Metrics": {
+            "type": "data",
+            "color": "#fa0f00",
+            "tm_scope": "source.afm",
+            "extensions": [
+                ".afm"
+            ],
+            "aliases": [
+                "acfm",
+                "adobe composite font metrics",
+                "adobe multiple font metrics",
+                "amfm"
+            ],
+            "ace_mode": "text",
+            "language_id": 147198098
+        }
+    },
+    {
+        "Agda": {
+            "type": "programming",
+            "color": "#315665",
+            "extensions": [
+                ".agda"
+            ],
+            "tm_scope": "source.agda",
+            "ace_mode": "text",
+            "language_id": 12,
+            "function_def": "myFunction : A -> B -> C",
+            "import_statement": "open import MyModule",
+            "print_statement": "putStrLn \"my_text\""
+        }
+    },
+    {
+        "Alloy": {
+            "type": "programming",
+            "color": "#64C800",
+            "extensions": [
+                ".als"
+            ],
+            "tm_scope": "source.alloy",
+            "ace_mode": "text",
+            "language_id": 13,
+            "function_def": "sig MySig { myFunction: set MyType }",
+            "import_statement": "// Alloy does not use imports",
+            "print_statement": "// Alloy is declarative and does not print"
+        }
+    },
+    {
+        "Alpine Abuild": {
+            "type": "programming",
+            "color": "#0D597F",
+            "group": "Shell",
+            "aliases": [
+                "abuild",
+                "apkbuild"
+            ],
+            "filenames": [
+                "APKBUILD"
+            ],
+            "tm_scope": "source.shell",
+            "ace_mode": "sh",
+            "codemirror_mode": "shell",
+            "codemirror_mime_type": "text/x-sh",
+            "language_id": 14,
+            "function_def": "my_function() { ... }",
+            "import_statement": ". my_library.sh",
+            "print_statement": "echo \"my_text\""
+        }
+    },
+    {
+        "Altium Designer": {
+            "type": "data",
+            "color": "#A89663",
+            "aliases": [
+                "altium"
+            ],
+            "extensions": [
+                ".OutJob",
+                ".PcbDoc",
+                ".PrjPCB",
+                ".SchDoc"
+            ],
+            "tm_scope": "source.ini",
+            "ace_mode": "ini",
+            "language_id": 187772328
+        }
+    },
+    {
+        "AngelScript": {
+            "type": "programming",
+            "color": "#C7D7DC",
+            "extensions": [
+                ".as",
+                ".angelscript"
+            ],
+            "tm_scope": "source.angelscript",
+            "ace_mode": "text",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-c++src",
+            "language_id": 389477596,
+            "function_def": "void myFunction() { }",
+            "import_statement": "import void myFunction() from \"myLibrary\";",
+            "print_statement": "Print(\"my_text\");"
+        }
+    },
+    {
+        "Ant Build System": {
+            "type": "data",
+            "color": "#A9157E",
+            "tm_scope": "text.xml.ant",
+            "filenames": [
+                "ant.xml",
+                "build.xml"
+            ],
+            "ace_mode": "xml",
+            "codemirror_mode": "xml",
+            "codemirror_mime_type": "application/xml",
+            "language_id": 15
+        }
+    },
+    {
+        "Antlers": {
+            "type": "markup",
+            "color": "#ff269e",
+            "extensions": [
+                ".antlers.html",
+                ".antlers.php",
+                ".antlers.xml"
+            ],
+            "tm_scope": "text.html.statamic",
+            "ace_mode": "text",
+            "language_id": 1067292663,
+            "function_def": "{{ my_function() }}",
+            "import_statement": "// Antlers does not use imports",
+            "print_statement": "{{ 'my_text' }}"
+        }
+    },
+    {
+        "ApacheConf": {
+            "type": "data",
+            "color": "#d12127",
+            "aliases": [
+                "aconf",
+                "apache"
+            ],
+            "extensions": [
+                ".apacheconf",
+                ".vhost"
+            ],
+            "filenames": [
+                ".htaccess",
+                "apache2.conf",
+                "httpd.conf"
+            ],
+            "tm_scope": "source.apache-config",
+            "ace_mode": "apache_conf",
+            "language_id": 16,
+            "function_def": "# Functions not applicable in config files",
+            "import_statement": "Include my_config.conf",
+            "print_statement": "# Directives output information"
+        }
+    },
+    {
+        "Apex": {
+            "type": "programming",
+            "color": "#1797c0",
+            "extensions": [
+                ".cls",
+                ".trigger"
+            ],
+            "tm_scope": "source.apex",
+            "ace_mode": "java",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-java",
+            "language_id": 17,
+            "function_def": "public void myFunction() { }",
+            "import_statement": "import MyNamespace.MyClass;",
+            "print_statement": "System.debug('my_text');"
+        }
+    }
+    ,
+    {
+        "APL": {
+            "type": "programming",
+            "color": "#5A8164",
+            "extensions": [
+                ".apl",
+                ".dyalog"
+            ],
+            "interpreters": [
+                "apl",
+                "aplx",
+                "dyalog"
+            ],
+            "tm_scope": "source.apl",
+            "ace_mode": "text",
+            "codemirror_mode": "apl",
+            "codemirror_mime_type": "text/apl",
+            "language_id": 6,
+            "function_def": "{ ⍵ ← ⍵ × 2 }",
+            "import_statement": "⎕FIO[1]←'my_library'",
+            "print_statement": "'my_text'"
+        }
+    },
+    {
+        "ASL": {
+            "type": "programming",
+            "ace_mode": "text",
+            "extensions": [
+                ".asl",
+                ".dsl"
+            ],
+            "tm_scope": "source.asl",
+            "language_id": 124996147,
+            "function_def": "Method myMethod;",
+            "import_statement": "Include myScript;",
+            "print_statement": "Output('my_text');"
+        }
+    },
+    {
+        "ASN.1": {
+            "type": "data",
+            "extensions": [
+                ".asn",
+                ".asn1"
+            ],
+            "tm_scope": "source.asn",
+            "ace_mode": "text",
+            "codemirror_mode": "asn.1",
+            "codemirror_mime_type": "text/x-ttcn-asn",
+            "language_id": 7,
+            "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+            "import_statement": "IMPORTS MyType FROM MyLibrary;",
+            "print_statement": "// ASN.1 is used for schema definitions, not printing"
+        }
+    },
+    {
+        "ASP.NET": {
+            "type": "programming",
+            "tm_scope": "text.html.asp",
+            "color": "#9400ff",
+            "aliases": [
+                "aspx",
+                "aspx-vb"
+            ],
+            "extensions": [
+                ".asax",
+                ".ascx",
+                ".ashx",
+                ".asmx",
+                ".aspx",
+                ".axd"
+            ],
+            "ace_mode": "text",
+            "codemirror_mode": "htmlembedded",
+            "codemirror_mime_type": "application/x-aspx",
+            "language_id": 564186416,
+            "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+            "import_statement": "using MyNamespace;",
+            "print_statement": "Response.Write(\"my_text\");"
+        }
+    },
+    {
+        "ATS": {
+            "type": "programming",
+            "color": "#1ac620",
+            "aliases": [
+                "ats2"
+            ],
+            "extensions": [
+                ".dats",
+                ".hats",
+                ".sats"
+            ],
+            "tm_scope": "source.ats",
+            "ace_mode": "ocaml",
+            "language_id": 9,
+            "function_def": "fun myFunction(): void = { ... }",
+            "import_statement": "staload \"my_library.sats\"",
+            "print_statement": "print(\"my_text\")"
+        }
+    },
+    {
+        "ActionScript": {
+            "type": "programming",
+            "tm_scope": "source.actionscript.3",
+            "color": "#882B0F",
+            "aliases": [
+                "actionscript 3",
+                "actionscript3",
+                "as3"
+            ],
+            "extensions": [
+                ".as"
+            ],
+            "ace_mode": "actionscript",
+            "language_id": 10,
+            "function_def": "function myFunction(): void { }",
+            "import_statement": "import MyPackage.*;",
+            "print_statement": "trace(\"my_text\");"
+        }
+    },
+    {
+        "Ada": {
+            "type": "programming",
+            "color": "#02f88c",
+            "extensions": [
+                ".adb",
+                ".ada",
+                ".ads"
+            ],
+            "aliases": [
+                "ada95",
+                "ada2005"
+            ],
+            "tm_scope": "source.ada",
+            "ace_mode": "ada",
+            "language_id": 11,
+            "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+            "import_statement": "with My_Package;",
+            "print_statement": "Put_Line(\"my_text\");"
+        }
+    },
+    {
+        "Adblock Filter List": {
+            "type": "data",
+            "color": "#800000",
+            "ace_mode": "text",
+            "extensions": [
+                ".txt"
+            ],
+            "aliases": [
+                "ad block filters",
+                "ad block",
+                "adb",
+                "adblock"
+            ],
+            "tm_scope": "text.adblock",
+            "language_id": 884614762
+        }
+    },
+    {
+        "Adobe Font Metrics": {
+            "type": "data",
+            "color": "#fa0f00",
+            "tm_scope": "source.afm",
+            "extensions": [
+                ".afm"
+            ],
+            "aliases": [
+                "acfm",
+                "adobe composite font metrics",
+                "adobe multiple font metrics",
+                "amfm"
+            ],
+            "ace_mode": "text",
+            "language_id": 147198098
+        }
+    },
+    {
+        "Agda": {
+            "type": "programming",
+            "color": "#315665",
+            "extensions": [
+                ".agda"
+            ],
+            "tm_scope": "source.agda",
+            "ace_mode": "text",
+            "language_id": 12,
+            "function_def": "myFunction : A -> B -> C",
+            "import_statement": "open import MyModule",
+            "print_statement": "putStrLn \"my_text\""
+        }
+    },
+    {
+        "Alloy": {
+            "type": "programming",
+            "color": "#64C800",
+            "extensions": [
+                ".als"
+            ],
+            "tm_scope": "source.alloy",
+            "ace_mode": "text",
+            "language_id": 13,
+            "function_def": "sig MySig { myFunction: set MyType }",
+            "import_statement": "// Alloy does not use imports",
+            "print_statement": "// Alloy is declarative and does not print"
+        }
+    },
+    {
+        "Alpine Abuild": {
+            "type": "programming",
+            "color": "#0D597F",
+            "group": "Shell",
+            "aliases": [
+                "abuild",
+                "apkbuild"
+            ],
+            "filenames": [
+                "APKBUILD"
+            ],
+            "tm_scope": "source.shell",
+            "ace_mode": "sh",
+            "codemirror_mode": "shell",
+            "codemirror_mime_type": "text/x-sh",
+            "language_id": 14,
+            "function_def": "my_function() { ... }",
+            "import_statement": ". my_library.sh",
+            "print_statement": "echo \"my_text\""
+        }
+    },
+    {
+        "Altium Designer": {
+            "type": "data",
+            "color": "#A89663",
+            "aliases": [
+                "altium"
+            ],
+            "extensions": [
+                ".OutJob",
+                ".PcbDoc",
+                ".PrjPCB",
+                ".SchDoc"
+            ],
+            "tm_scope": "source.ini",
+            "ace_mode": "ini",
+            "language_id": 187772328
+        }
+    },
+    {
+        "AngelScript": {
+            "type": "programming",
+            "color": "#C7D7DC",
+            "extensions": [
+                ".as",
+                ".angelscript"
+            ],
+            "tm_scope": "source.angelscript",
+            "ace_mode": "text",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-c++src",
+            "language_id": 389477596,
+            "function_def": "void myFunction() { }",
+            "import_statement": "import void myFunction() from \"myLibrary\";",
+            "print_statement": "Print(\"my_text\");"
+        }
+    },
+    {
+        "Ant Build System": {
+            "type": "data",
+            "color": "#A9157E",
+            "tm_scope": "text.xml.ant",
+            "filenames": [
+                "ant.xml",
+                "build.xml"
+            ],
+            "ace_mode": "xml",
+            "codemirror_mode": "xml",
+            "codemirror_mime_type": "application/xml",
+            "language_id": 15
+        }
+    }
+
+    ,
+    {
+        "Antlers": {
+            "type": "markup",
+            "color": "#ff269e",
+            "extensions": [
+                ".antlers.html",
+                ".antlers.php",
+                ".antlers.xml"
+            ],
+            "tm_scope": "text.html.statamic",
+            "ace_mode": "text",
+            "language_id": 1067292663,
+            "function_def": "{{ my_function() }}",
+            "import_statement": "// Antlers does not use imports",
+            "print_statement": "{{ 'my_text' }}"
+        }
+    },
+    {
+        "ApacheConf": {
+            "type": "data",
+            "color": "#d12127",
+            "aliases": [
+                "aconf",
+                "apache"
+            ],
+            "extensions": [
+                ".apacheconf",
+                ".vhost"
+            ],
+            "filenames": [
+                ".htaccess",
+                "apache2.conf",
+                "httpd.conf"
+            ],
+            "tm_scope": "source.apache-config",
+            "ace_mode": "apache_conf",
+            "language_id": 16,
+            "function_def": "# Functions not applicable in config files",
+            "import_statement": "Include my_config.conf",
+            "print_statement": "# Directives output information"
+        }
+    },
+    {
+        "Apex": {
+            "type": "programming",
+            "color": "#1797c0",
+            "extensions": [
+                ".cls",
+                ".trigger"
+            ],
+            "tm_scope": "source.apex",
+            "ace_mode": "java",
+            "codemirror_mode": "clike",
+            "codemirror_mime_type": "text/x-java",
+            "language_id": 17,
+            "function_def": "public void myFunction() { }",
+            "import_statement": "import MyNamespace.MyClass;",
+            "print_statement": "System.debug('my_text');"
+        }
+    },
+    {
+        "APL": {
+            "type": "programming",
+            "color": "#5A8164",
+            "extensions": [
+                ".apl",
+                ".dyalog"
+            ],
+            "interpreters": [
+                "apl",
+                "aplx",
+                "dyalog"
+            ],
+            "tm_scope": "source.apl",
+            "ace_mode": "text",
+            "codemirror_mode": "apl",
+            "codemirror_mime_type": "text/apl",
+            "language_id": 6,
+            "function_def": "{ ⍵ ← ⍵ × 2 }",
+            "import_statement": "⎕FIO[1]←'my_library'",
+            "print_statement": "'my_text'"
+        }
+    },
+    {
+        "ASL": {
+            "type": "programming",
+            "ace_mode": "text",
+            "extensions": [
+                ".asl",
+                ".dsl"
+            ],
+            "tm_scope": "source.asl",
+            "language_id": 124996147,
+            "function_def": "Method myMethod;",
+            "import_statement": "Include myScript;",
+            "print_statement": "Output('my_text');"
+        }
+    },
+    {
+        "ASN.1": {
+            "type": "data",
+            "extensions": [
+                ".asn",
+                ".asn1"
+            ],
+            "tm_scope": "source.asn",
+            "ace_mode": "text",
+            "codemirror_mode": "asn.1",
+            "codemirror_mime_type": "text/x-ttcn-asn",
+            "language_id": 7,
+            "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+            "import_statement": "IMPORTS MyType FROM MyLibrary;",
+            "print_statement": "// ASN.1 is used for schema definitions, not printing"
+        }
+    },
+    {
+        "ASP.NET": {
+            "type": "programming",
+            "tm_scope": "text.html.asp",
+            "color": "#9400ff",
+            "aliases": [
+                "aspx",
+                "aspx-vb"
+            ],
+            "extensions": [
+                ".asax",
+                ".ascx",
+                ".ashx",
+                ".asmx",
+                ".aspx",
+                ".axd"
+            ],
+            "ace_mode": "text",
+            "codemirror_mode": "htmlembedded",
+            "codemirror_mime_type": "application/x-aspx",
+            "language_id": 564186416,
+            "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+            "import_statement": "using MyNamespace;",
+            "print_statement": "Response.Write(\"my_text\");"
+        }
+    },
+    {
+        "ATS": {
+            "type": "programming",
+            "color": "#1ac620",
+            "aliases": [
+                "ats2"
+            ],
+            "extensions": [
+                ".dats",
+                ".hats",
+                ".sats"
+            ],
+            "tm_scope": "source.ats",
+            "ace_mode": "ocaml",
+            "language_id": 9,
+            "function_def": "fun myFunction(): void = { ... }",
+            "import_statement": "staload \"my_library.sats\"",
+            "print_statement": "print(\"my_text\")"
+        }
+    },
+    {
+        "ActionScript": {
+            "type": "programming",
+            "tm_scope": "source.actionscript.3",
+            "color": "#882B0F",
+            "aliases": [
+                "actionscript 3",
+                "actionscript3",
+                "as3"
+            ],
+            "extensions": [
+                ".as"
+            ],
+            "ace_mode": "actionscript",
+            "language_id": 10,
+            "function_def": "function myFunction(): void { }",
+            "import_statement": "import MyPackage.*;",
+            "print_statement": "trace(\"my_text\");"
+        }
+    },
+    {
+        "Ada": {
+            "type": "programming",
+            "color": "#02f88c",
+            "extensions": [
+                ".adb",
+                ".ada",
+                ".ads"
+            ],
+            "aliases": [
+                "ada95",
+                "ada2005"
+            ],
+            "tm_scope": "source.ada",
+            "ace_mode": "ada",
+            "language_id": 11,
+            "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+            "import_statement": "with My_Package;",
+            "print_statement": "Put_Line(\"my_text\");"
+        }
+    }
+    ,
+{
+    "Adblock Filter List": {
+        "type": "data",
+        "color": "#800000",
+        "ace_mode": "text",
+        "extensions": [
+            ".txt"
+        ],
+        "aliases": [
+            "ad block filters",
+            "ad block",
+            "adb",
+            "adblock"
+        ],
+        "tm_scope": "text.adblock",
+        "language_id": 884614762
+    }
+},
+{
+    "Adobe Font Metrics": {
+        "type": "data",
+        "color": "#fa0f00",
+        "tm_scope": "source.afm",
+        "extensions": [
+            ".afm"
+        ],
+        "aliases": [
+            "acfm",
+            "adobe composite font metrics",
+            "adobe multiple font metrics",
+            "amfm"
+        ],
+        "ace_mode": "text",
+        "language_id": 147198098
+    }
+},
+{
+    "Agda": {
+        "type": "programming",
+        "color": "#315665",
+        "extensions": [
+            ".agda"
+        ],
+        "tm_scope": "source.agda",
+        "ace_mode": "text",
+        "language_id": 12,
+        "function_def": "myFunction : A -> B -> C",
+        "import_statement": "open import MyModule",
+        "print_statement": "putStrLn \"my_text\""
+    }
+},
+{
+    "Alloy": {
+        "type": "programming",
+        "color": "#64C800",
+        "extensions": [
+            ".als"
+        ],
+        "tm_scope": "source.alloy",
+        "ace_mode": "text",
+        "language_id": 13,
+        "function_def": "sig MySig { myFunction: set MyType }",
+        "import_statement": "// Alloy does not use imports",
+        "print_statement": "// Alloy is declarative and does not print"
+    }
+},
+{
+    "Alpine Abuild": {
+        "type": "programming",
+        "color": "#0D597F",
+        "group": "Shell",
+        "aliases": [
+            "abuild",
+            "apkbuild"
+        ],
+        "filenames": [
+            "APKBUILD"
+        ],
+        "tm_scope": "source.shell",
+        "ace_mode": "sh",
+        "codemirror_mode": "shell",
+        "codemirror_mime_type": "text/x-sh",
+        "language_id": 14,
+        "function_def": "my_function() { ... }",
+        "import_statement": ". my_library.sh",
+        "print_statement": "echo \"my_text\""
+    }
+},
+{
+    "Altium Designer": {
+        "type": "data",
+        "color": "#A89663",
+        "aliases": [
+            "altium"
+        ],
+        "extensions": [
+            ".OutJob",
+            ".PcbDoc",
+            ".PrjPCB",
+            ".SchDoc"
+        ],
+        "tm_scope": "source.ini",
+        "ace_mode": "ini",
+        "language_id": 187772328
+    }
+},
+{
+    "AngelScript": {
+        "type": "programming",
+        "color": "#C7D7DC",
+        "extensions": [
+            ".as",
+            ".angelscript"
+        ],
+        "tm_scope": "source.angelscript",
+        "ace_mode": "text",
+        "codemirror_mode": "clike",
+        "codemirror_mime_type": "text/x-c++src",
+        "language_id": 389477596,
+        "function_def": "void myFunction() { }",
+        "import_statement": "import void myFunction() from \"myLibrary\";",
+        "print_statement": "Print(\"my_text\");"
+    }
+},
+{
+    "Ant Build System": {
+        "type": "data",
+        "color": "#A9157E",
+        "tm_scope": "text.xml.ant",
+        "filenames": [
+            "ant.xml",
+            "build.xml"
+        ],
+        "ace_mode": "xml",
+        "codemirror_mode": "xml",
+        "codemirror_mime_type": "application/xml",
+        "language_id": 15
+    }
+},
+{
+    "Antlers": {
+        "type": "markup",
+        "color": "#ff269e",
+        "extensions": [
+            ".antlers.html",
+            ".antlers.php",
+            ".antlers.xml"
+        ],
+        "tm_scope": "text.html.statamic",
+        "ace_mode": "text",
+        "language_id": 1067292663,
+        "function_def": "{{ my_function() }}",
+        "import_statement": "// Antlers does not use imports",
+        "print_statement": "{{ 'my_text' }}"
+    }
+},
+{
+    "ApacheConf": {
+        "type": "data",
+        "color": "#d12127",
+        "aliases": [
+            "aconf",
+            "apache"
+        ],
+        "extensions": [
+            ".apacheconf",
+            ".vhost"
+        ],
+        "filenames": [
+            ".htaccess",
+            "apache2.conf",
+            "httpd.conf"
+        ],
+        "tm_scope": "source.apache-config",
+        "ace_mode": "apache_conf",
+        "language_id": 16,
+        "function_def": "# Functions not applicable in config files",
+        "import_statement": "Include my_config.conf",
+        "print_statement": "# Directives output information"
+    }
+},
+{
+    "Apex": {
+        "type": "programming",
+        "color": "#1797c0",
+        "extensions": [
+            ".cls",
+            ".trigger"
+        ],
+        "tm_scope": "source.apex",
+        "ace_mode": "java",
+        "codemirror_mode": "clike",
+        "codemirror_mime_type": "text/x-java",
+        "language_id": 17,
+        "function_def": "public void myFunction() { }",
+        "import_statement": "import MyNamespace.MyClass;",
+        "print_statement": "System.debug('my_text');"
+    }
+},
+{
+    "APL": {
+        "type": "programming",
+        "color": "#5A8164",
+        "extensions": [
+            ".apl",
+            ".dyalog"
+        ],
+        "interpreters": [
+            "apl",
+            "aplx",
+            "dyalog"
+        ],
+        "tm_scope": "source.apl",
+        "ace_mode": "text",
+        "codemirror_mode": "apl",
+        "codemirror_mime_type": "text/apl",
+        "language_id": 6,
+        "function_def": "{ ⍵ ← ⍵ × 2 }",
+        "import_statement": "⎕FIO[1]←'my_library'",
+        "print_statement": "'my_text'"
+    }
+}
+
+,
+{
+    "ASL": {
+        "type": "programming",
+        "ace_mode": "text",
+        "extensions": [
+            ".asl",
+            ".dsl"
+        ],
+        "tm_scope": "source.asl",
+        "language_id": 124996147,
+        "function_def": "Method myMethod;",
+        "import_statement": "Include myScript;",
+        "print_statement": "Output('my_text');"
+    }
+},
+{
+    "ASN.1": {
+        "type": "data",
+        "extensions": [
+            ".asn",
+            ".asn1"
+        ],
+        "tm_scope": "source.asn",
+        "ace_mode": "text",
+        "codemirror_mode": "asn.1",
+        "codemirror_mime_type": "text/x-ttcn-asn",
+        "language_id": 7,
+        "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+        "import_statement": "IMPORTS MyType FROM MyLibrary;",
+        "print_statement": "// ASN.1 is used for schema definitions, not printing"
+    }
+},
+{
+    "ASP.NET": {
+        "type": "programming",
+        "tm_scope": "text.html.asp",
+        "color": "#9400ff",
+        "aliases": [
+            "aspx",
+            "aspx-vb"
+        ],
+        "extensions": [
+            ".asax",
+            ".ascx",
+            ".ashx",
+            ".asmx",
+            ".aspx",
+            ".axd"
+        ],
+        "ace_mode": "text",
+        "codemirror_mode": "htmlembedded",
+        "codemirror_mime_type": "application/x-aspx",
+        "language_id": 564186416,
+        "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+        "import_statement": "using MyNamespace;",
+        "print_statement": "Response.Write(\"my_text\");"
+    }
+},
+{
+    "ATS": {
+        "type": "programming",
+        "color": "#1ac620",
+        "aliases": [
+            "ats2"
+        ],
+        "extensions": [
+            ".dats",
+            ".hats",
+            ".sats"
+        ],
+        "tm_scope": "source.ats",
+        "ace_mode": "ocaml",
+        "language_id": 9,
+        "function_def": "fun myFunction(): void = { ... }",
+        "import_statement": "staload \"my_library.sats\"",
+        "print_statement": "print(\"my_text\")"
+    }
+},
+{
+    "ActionScript": {
+        "type": "programming",
+        "tm_scope": "source.actionscript.3",
+        "color": "#882B0F",
+        "aliases": [
+            "actionscript 3",
+            "actionscript3",
+            "as3"
+        ],
+        "extensions": [
+            ".as"
+        ],
+        "ace_mode": "actionscript",
+        "language_id": 10,
+        "function_def": "function myFunction(): void { }",
+        "import_statement": "import MyPackage.*;",
+        "print_statement": "trace(\"my_text\");"
+    }
+},
+{
+    "Ada": {
+        "type": "programming",
+        "color": "#02f88c",
+        "extensions": [
+            ".adb",
+            ".ada",
+            ".ads"
+        ],
+        "aliases": [
+            "ada95",
+            "ada2005"
+        ],
+        "tm_scope": "source.ada",
+        "ace_mode": "ada",
+        "language_id": 11,
+        "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+        "import_statement": "with My_Package;",
+        "print_statement": "Put_Line(\"my_text\");"
+    }
+},
+{
+    "Adblock Filter List": {
+        "type": "data",
+        "color": "#800000",
+        "ace_mode": "text",
+        "extensions": [
+            ".txt"
+        ],
+        "aliases": [
+            "ad block filters",
+            "ad block",
+            "adb",
+            "adblock"
+        ],
+        "tm_scope": "text.adblock",
+        "language_id": 884614762
+    }
+},
+{
+    "Adobe Font Metrics": {
+        "type": "data",
+        "color": "#fa0f00",
+        "tm_scope": "source.afm",
+        "extensions": [
+            ".afm"
+        ],
+        "aliases": [
+            "acfm",
+            "adobe composite font metrics",
+            "adobe multiple font metrics",
+            "amfm"
+        ],
+        "ace_mode": "text",
+        "language_id": 147198098
+    }
+},
+{
+    "Agda": {
+        "type": "programming",
+        "color": "#315665",
+        "extensions": [
+            ".agda"
+        ],
+        "tm_scope": "source.agda",
+        "ace_mode": "text",
+        "language_id": 12,
+        "function_def": "myFunction : A -> B -> C",
+        "import_statement": "open import MyModule",
+        "print_statement": "putStrLn \"my_text\""
+    }
+},
+{
+    "Alloy": {
+        "type": "programming",
+        "color": "#64C800",
+        "extensions": [
+            ".als"
+        ],
+        "tm_scope": "source.alloy",
+        "ace_mode": "text",
+        "language_id": 13,
+        "function_def": "sig MySig { myFunction: set MyType }",
+        "import_statement": "// Alloy does not use imports",
+        "print_statement": "// Alloy is declarative and does not print"
+    }
+},
+{
+    "Alpine Abuild": {
+        "type": "programming",
+        "color": "#0D597F",
+        "group": "Shell",
+        "aliases": [
+            "abuild",
+            "apkbuild"
+        ],
+        "filenames": [
+            "APKBUILD"
+        ],
+        "tm_scope": "source.shell",
+        "ace_mode": "sh",
+        "codemirror_mode": "shell",
+        "codemirror_mime_type": "text/x-sh",
+        "language_id": 14,
+        "function_def": "my_function() { ... }",
+        "import_statement": ". my_library.sh",
+        "print_statement": "echo \"my_text\""
+    }
+},
+{
+    "Altium Designer": {
+        "type": "data",
+        "color": "#A89663",
+        "aliases": [
+            "altium"
+        ],
+        "extensions": [
+            ".OutJob",
+            ".PcbDoc",
+            ".PrjPCB",
+            ".SchDoc"
+        ],
+        "tm_scope": "source.ini",
+        "ace_mode": "ini",
+        "language_id": 187772328
+    }
+},
+{
+    "AngelScript": {
+        "type": "programming",
+        "color": "#C7D7DC",
+        "extensions": [
+            ".as",
+            ".angelscript"
+        ],
+        "tm_scope": "source.angelscript",
+        "ace_mode": "text",
+        "codemirror_mode": "clike",
+        "codemirror_mime_type": "text/x-c++src",
+        "language_id": 389477596,
+        "function_def": "void myFunction() { }",
+        "import_statement": "import void myFunction() from \"myLibrary\";",
+        "print_statement": "Print(\"my_text\");"
+    }
+},
+{
+    "Ant Build System": {
+        "type": "data",
+        "color": "#A9157E",
+        "tm_scope": "text.xml.ant",
+        "filenames": [
+            "ant.xml",
+            "build.xml"
+        ],
+        "ace_mode": "xml",
+        "codemirror_mode": "xml",
+        "codemirror_mime_type": "application/xml",
+        "language_id": 15
+    }
+}
+,
+{
+    "Antlers": {
+        "type": "markup",
+        "color": "#ff269e",
+        "extensions": [
+            ".antlers.html",
+            ".antlers.php",
+            ".antlers.xml"
+        ],
+        "tm_scope": "text.html.statamic",
+        "ace_mode": "text",
+        "language_id": 1067292663,
+        "function_def": "{{ my_function() }}",
+        "import_statement": "// Antlers does not use imports",
+        "print_statement": "{{ 'my_text' }}"
+    }
+},
+{
+    "ApacheConf": {
+        "type": "data",
+        "color": "#d12127",
+        "aliases": [
+            "aconf",
+            "apache"
+        ],
+        "extensions": [
+            ".apacheconf",
+            ".vhost"
+        ],
+        "filenames": [
+            ".htaccess",
+            "apache2.conf",
+            "httpd.conf"
+        ],
+        "tm_scope": "source.apache-config",
+        "ace_mode": "apache_conf",
+        "language_id": 16,
+        "function_def": "# Functions not applicable in config files",
+        "import_statement": "Include my_config.conf",
+        "print_statement": "# Directives output information"
+    }
+},
+{
+    "Apex": {
+        "type": "programming",
+        "color": "#1797c0",
+        "extensions": [
+            ".cls",
+            ".trigger"
+        ],
+        "tm_scope": "source.apex",
+        "ace_mode": "java",
+        "codemirror_mode": "clike",
+        "codemirror_mime_type": "text/x-java",
+        "language_id": 17,
+        "function_def": "public void myFunction() { }",
+        "import_statement": "import MyNamespace.MyClass;",
+        "print_statement": "System.debug('my_text');"
+    }
+},
+{
+    "APL": {
+        "type": "programming",
+        "color": "#5A8164",
+        "extensions": [
+            ".apl",
+            ".dyalog"
+        ],
+        "interpreters": [
+            "apl",
+            "aplx",
+            "dyalog"
+        ],
+        "tm_scope": "source.apl",
+        "ace_mode": "text",
+        "codemirror_mode": "apl",
+        "codemirror_mime_type": "text/apl",
+        "language_id": 6,
+        "function_def": "{ ⍵ ← ⍵ × 2 }",
+        "import_statement": "⎕FIO[1]←'my_library'",
+        "print_statement": "'my_text'"
+    }
+},
+{
+    "ASL": {
+        "type": "programming",
+        "ace_mode": "text",
+        "extensions": [
+            ".asl",
+            ".dsl"
+        ],
+        "tm_scope": "source.asl",
+        "language_id": 124996147,
+        "function_def": "Method myMethod;",
+        "import_statement": "Include myScript;",
+        "print_statement": "Output('my_text');"
+    }
+},
+{
+    "ASN.1": {
+        "type": "data",
+        "extensions": [
+            ".asn",
+            ".asn1"
+        ],
+        "tm_scope": "source.asn",
+        "ace_mode": "text",
+        "codemirror_mode": "asn.1",
+        "codemirror_mime_type": "text/x-ttcn-asn",
+        "language_id": 7,
+        "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+        "import_statement": "IMPORTS MyType FROM MyLibrary;",
+        "print_statement": "// ASN.1 is used for schema definitions, not printing"
+    }
+},
+{
+    "ASP.NET": {
+        "type": "programming",
+        "tm_scope": "text.html.asp",
+        "color": "#9400ff",
+        "aliases": [
+            "aspx",
+            "aspx-vb"
+        ],
+        "extensions": [
+            ".asax",
+            ".ascx",
+            ".ashx",
+            ".asmx",
+            ".aspx",
+            ".axd"
+        ],
+        "ace_mode": "text",
+        "codemirror_mode": "htmlembedded",
+        "codemirror_mime_type": "application/x-aspx",
+        "language_id": 564186416,
+        "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+        "import_statement": "using MyNamespace;",
+        "print_statement": "Response.Write(\"my_text\");"
+    }
+},
+{
+    "ATS": {
+        "type": "programming",
+        "color": "#1ac620",
+        "aliases": [
+            "ats2"
+        ],
+        "extensions": [
+            ".dats",
+            ".hats",
+            ".sats"
+        ],
+        "tm_scope": "source.ats",
+        "ace_mode": "ocaml",
+        "language_id": 9,
+        "function_def": "fun myFunction(): void = { ... }",
+        "import_statement": "staload \"my_library.sats\"",
+        "print_statement": "print(\"my_text\")"
+    }
+},
+{
+    "ActionScript": {
+        "type": "programming",
+        "tm_scope": "source.actionscript.3",
+        "color": "#882B0F",
+        "aliases": [
+            "actionscript 3",
+            "actionscript3",
+            "as3"
+        ],
+        "extensions": [
+            ".as"
+        ],
+        "ace_mode": "actionscript",
+        "language_id": 10,
+        "function_def": "function myFunction(): void { }",
+        "import_statement": "import MyPackage.*;",
+        "print_statement": "trace(\"my_text\");"
+    }
+},
+{
+    "Ada": {
+        "type": "programming",
+        "color": "#02f88c",
+        "extensions": [
+            ".adb",
+            ".ada",
+            ".ads"
+        ],
+        "aliases": [
+            "ada95",
+            "ada2005"
+        ],
+        "tm_scope": "source.ada",
+        "ace_mode": "ada",
+        "language_id": 11,
+        "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+        "import_statement": "with My_Package;",
+        "print_statement": "Put_Line(\"my_text\");"
+    }
+}
+,
+{
+    "Adblock Filter List": {
+        "type": "data",
+        "color": "#800000",
+        "ace_mode": "text",
+        "extensions": [
+            ".txt"
+        ],
+        "aliases": [
+            "ad block filters",
+            "ad block",
+            "adb",
+            "adblock"
+        ],
+        "tm_scope": "text.adblock",
+        "language_id": 884614762
+    }
+},
+{
+    "Adobe Font Metrics": {
+        "type": "data",
+        "color": "#fa0f00",
+        "tm_scope": "source.afm",
+        "extensions": [
+            ".afm"
+        ],
+        "aliases": [
+            "acfm",
+            "adobe composite font metrics",
+            "adobe multiple font metrics",
+            "amfm"
+        ],
+        "ace_mode": "text",
+        "language_id": 147198098
+    }
+},
+{
+    "Agda": {
+        "type": "programming",
+        "color": "#315665",
+        "extensions": [
+            ".agda"
+        ],
+        "tm_scope": "source.agda",
+        "ace_mode": "text",
+        "language_id": 12,
+        "function_def": "myFunction : A -> B -> C",
+        "import_statement": "open import MyModule",
+        "print_statement": "putStrLn \"my_text\""
+    }
+},
+{
+    "Alloy": {
+        "type": "programming",
+        "color": "#64C800",
+        "extensions": [
+            ".als"
+        ],
+        "tm_scope": "source.alloy",
+        "ace_mode": "text",
+        "language_id": 13,
+        "function_def": "sig MySig { myFunction: set MyType }",
+        "import_statement": "// Alloy does not use imports",
+        "print_statement": "// Alloy is declarative and does not print"
+    }
+},
+{
+    "Alpine Abuild": {
+        "type": "programming",
+        "color": "#0D597F",
+        "group": "Shell",
+        "aliases": [
+            "abuild",
+            "apkbuild"
+        ],
+        "filenames": [
+            "APKBUILD"
+        ],
+        "tm_scope": "source.shell",
+        "ace_mode": "sh",
+        "codemirror_mode": "shell",
+        "codemirror_mime_type": "text/x-sh",
+        "language_id": 14,
+        "function_def": "my_function() { ... }",
+        "import_statement": ". my_library.sh",
+        "print_statement": "echo \"my_text\""
+    }
+},
+{
+    "Altium Designer": {
+        "type": "data",
+        "color": "#A89663",
+        "aliases": [
+            "altium"
+        ],
+        "extensions": [
+            ".OutJob",
+            ".PcbDoc",
+            ".PrjPCB",
+            ".SchDoc"
+        ],
+        "tm_scope": "source.ini",
+        "ace_mode": "ini",
+        "language_id": 187772328
+    }
+},
+{
+    "AngelScript": {
+        "type": "programming",
+        "color": "#C7D7DC",
+        "extensions": [
+            ".as",
+            ".angelscript"
+        ],
+        "tm_scope": "source.angelscript",
+        "ace_mode": "text",
+        "codemirror_mode": "clike",
+        "codemirror_mime_type": "text/x-c++src",
+        "language_id": 389477596,
+        "function_def": "void myFunction() { }",
+        "import_statement": "import void myFunction() from \"myLibrary\";",
+        "print_statement": "Print(\"my_text\");"
+    }
+},
+{
+    "Ant Build System": {
+        "type": "data",
+        "color": "#A9157E",
+        "tm_scope": "text.xml.ant",
+        "filenames": [
+            "ant.xml",
+            "build.xml"
+        ],
+        "ace_mode": "xml",
+        "codemirror_mode": "xml",
+        "codemirror_mime_type": "application/xml",
+        "language_id": 15
+    }
+},
+{
+    "Antlers": {
+        "type": "markup",
+        "color": "#ff269e",
+        "extensions": [
+            ".antlers.html",
+            ".antlers.php",
+            ".antlers.xml"
+        ],
+        "tm_scope": "text.html.statamic",
+        "ace_mode": "text",
+        "language_id": 1067292663,
+        "function_def": "{{ my_function() }}",
+        "import_statement": "// Antlers does not use imports",
+        "print_statement": "{{ 'my_text' }}"
+    }
+},
+{
+    "ApacheConf": {
+        "type": "data",
+        "color": "#d12127",
+        "aliases": [
+            "aconf",
+            "apache"
+        ],
+        "extensions": [
+            ".apacheconf",
+            ".vhost"
+        ],
+        "filenames": [
+            ".htaccess",
+            "apache2.conf",
+            "httpd.conf"
+        ],
+        "tm_scope": "source.apache-config",
+        "ace_mode": "apache_conf",
+        "language_id": 16,
+        "function_def": "# Functions not applicable in config files",
+        "import_statement": "Include my_config.conf",
+        "print_statement": "# Directives output information"
+    }
+},
+{
+    "Apex": {
+        "type": "programming",
+        "color": "#1797c0",
+        "extensions": [
+            ".cls",
+            ".trigger"
+        ],
+        "tm_scope": "source.apex",
+        "ace_mode": "java",
+        "codemirror_mode": "clike",
+        "codemirror_mime_type": "text/x-java",
+        "language_id": 17,
+        "function_def": "public void myFunction() { }",
+        "import_statement": "import MyNamespace.MyClass;",
+        "print_statement": "System.debug('my_text');"
+    }
+}
+,
+{
+    "Antlers": {
+        "type": "markup",
+        "color": "#ff269e",
+        "extensions": [
+            ".antlers.html",
+            ".antlers.php",
+            ".antlers.xml"
+        ],
+        "tm_scope": "text.html.statamic",
+        "ace_mode": "text",
+        "language_id": 1067292663,
+        "function_def": "{{ my_function() }}",
+        "import_statement": "// Antlers does not use imports",
+        "print_statement": "{{ 'my_text' }}"
+    }
+},
+{
+    "ApacheConf": {
+        "type": "data",
+        "color": "#d12127",
+        "aliases": [
+            "aconf",
+            "apache"
+        ],
+        "extensions": [
+            ".apacheconf",
+            ".vhost"
+        ],
+        "filenames": [
+            ".htaccess",
+            "apache2.conf",
+            "httpd.conf"
+        ],
+        "tm_scope": "source.apache-config",
+        "ace_mode": "apache_conf",
+        "language_id": 16,
+        "function_def": "# Functions not applicable in config files",
+        "import_statement": "Include my_config.conf",
+        "print_statement": "# Directives output information"
+    }
+},
+{
+    "Apex": {
+        "type": "programming",
+        "color": "#1797c0",
+        "extensions": [
+            ".cls",
+            ".trigger"
+        ],
+        "tm_scope": "source.apex",
+        "ace_mode": "java",
+        "codemirror_mode": "clike",
+        "codemirror_mime_type": "text/x-java",
+        "language_id": 17,
+        "function_def": "public void myFunction() { }",
+        "import_statement": "import MyNamespace.MyClass;",
+        "print_statement": "System.debug('my_text');"
+    }
+},
+{
+    "APL": {
+        "type": "programming",
+        "color": "#5A8164",
+        "extensions": [
+            ".apl",
+            ".dyalog"
+        ],
+        "interpreters": [
+            "apl",
+            "aplx",
+            "dyalog"
+        ],
+        "tm_scope": "source.apl",
+        "ace_mode": "text",
+        "codemirror_mode": "apl",
+        "codemirror_mime_type": "text/apl",
+        "language_id": 6,
+        "function_def": "{ ⍵ ← ⍵ × 2 }",
+        "import_statement": "⎕FIO[1]←'my_library'",
+        "print_statement": "'my_text'"
+    }
+},
+{
+    "ASL": {
+        "type": "programming",
+        "ace_mode": "text",
+        "extensions": [
+            ".asl",
+            ".dsl"
+        ],
+        "tm_scope": "source.asl",
+        "language_id": 124996147,
+        "function_def": "Method myMethod;",
+        "import_statement": "Include myScript;",
+        "print_statement": "Output('my_text');"
+    }
+},
+{
+    "ASN.1": {
+        "type": "data",
+        "extensions": [
+            ".asn",
+            ".asn1"
+        ],
+        "tm_scope": "source.asn",
+        "ace_mode": "text",
+        "codemirror_mode": "asn.1",
+        "codemirror_mime_type": "text/x-ttcn-asn",
+        "language_id": 7,
+        "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+        "import_statement": "IMPORTS MyType FROM MyLibrary;",
+        "print_statement": "// ASN.1 is used for schema definitions, not printing"
+    }
+},
+{
+    "ASP.NET": {
+        "type": "programming",
+        "tm_scope": "text.html.asp",
+        "color": "#9400ff",
+        "aliases": [
+            "aspx",
+            "aspx-vb"
+        ],
+        "extensions": [
+            ".asax",
+            ".ascx",
+            ".ashx",
+            ".asmx",
+            ".aspx",
+            ".axd"
+        ],
+        "ace_mode": "text",
+        "codemirror_mode": "htmlembedded",
+        "codemirror_mime_type": "application/x-aspx",
+        "language_id": 564186416,
+        "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+        "import_statement": "using MyNamespace;",
+        "print_statement": "Response.Write(\"my_text\");"
+    }
+},
+{
+    "ATS": {
+        "type": "programming",
+        "color": "#1ac620",
+        "aliases": [
+            "ats2"
+        ],
+        "extensions": [
+            ".dats",
+            ".hats",
+            ".sats"
+        ],
+        "tm_scope": "source.ats",
+        "ace_mode": "ocaml",
+        "language_id": 9,
+        "function_def": "fun myFunction(): void = { ... }",
+        "import_statement": "staload \"my_library.sats\"",
+        "print_statement": "print(\"my_text\")"
+    }
+},
+{
+    "ActionScript": {
+        "type": "programming",
+        "tm_scope": "source.actionscript.3",
+        "color": "#882B0F",
+        "aliases": [
+            "actionscript 3",
+            "actionscript3",
+            "as3"
+        ],
+        "extensions": [
+            ".as"
+        ],
+        "ace_mode": "actionscript",
+        "language_id": 10,
+        "function_def": "function myFunction(): void { }",
+        "import_statement": "import MyPackage.*;",
+        "print_statement": "trace(\"my_text\");"
+    }
+},
+{
+    "Ada": {
+        "type": "programming",
+        "color": "#02f88c",
+        "extensions": [
+            ".adb",
+            ".ada",
+            ".ads"
+        ],
+        "aliases": [
+            "ada95",
+            "ada2005"
+        ],
+        "tm_scope": "source.ada",
+        "ace_mode": "ada",
+        "language_id": 11,
+        "function_def": "procedure My_Procedure is begin null; end My_Procedure;",
+        "import_statement": "with My_Package;",
+        "print_statement": "Put_Line(\"my_text\");"
+    }
+}
+,
+{
+    "APL": {
+        "type": "programming",
+        "color": "#5A8164",
+        "extensions": [
+            ".apl",
+            ".dyalog"
+        ],
+        "interpreters": [
+            "apl",
+            "aplx",
+            "dyalog"
+        ],
+        "tm_scope": "source.apl",
+        "ace_mode": "text",
+        "codemirror_mode": "apl",
+        "codemirror_mime_type": "text/apl",
+        "language_id": 6,
+        "function_def": "{ ⍵ ← ⍵ × 2 }",
+        "import_statement": "⎕FIO[1]←'my_library'",
+        "print_statement": "'my_text'"
+    }
+},
+{
+    "ASL": {
+        "type": "programming",
+        "ace_mode": "text",
+        "extensions": [
+            ".asl",
+            ".dsl"
+        ],
+        "tm_scope": "source.asl",
+        "language_id": 124996147,
+        "function_def": "Method myMethod;",
+        "import_statement": "Include myScript;",
+        "print_statement": "Output('my_text');"
+    }
+},
+{
+    "ASN.1": {
+        "type": "data",
+        "extensions": [
+            ".asn",
+            ".asn1"
+        ],
+        "tm_scope": "source.asn",
+        "ace_mode": "text",
+        "codemirror_mode": "asn.1",
+        "codemirror_mime_type": "text/x-ttcn-asn",
+        "language_id": 7,
+        "function_def": "Module MyModule DEFINITIONS ::= BEGIN ... END",
+        "import_statement": "IMPORTS MyType FROM MyLibrary;",
+        "print_statement": "// ASN.1 is used for schema definitions, not printing"
+    }
+}
+,
+{
+    "ASP.NET": {
+        "type": "programming",
+        "tm_scope": "text.html.asp",
+        "color": "#9400ff",
+        "aliases": [
+            "aspx",
+            "aspx-vb"
+        ],
+        "extensions": [
+            ".asax",
+            ".ascx",
+            ".ashx",
+            ".asmx",
+            ".aspx",
+            ".axd"
+        ],
+        "ace_mode": "text",
+        "codemirror_mode": "htmlembedded",
+        "codemirror_mime_type": "application/x-aspx",
+        "language_id": 564186416,
+        "function_def": "<script runat=\"server\"> void myFunction() { }</script>",
+        "import_statement": "using MyNamespace;",
+        "print_statement": "Response.Write(\"my_text\");"
+    }
+},
+{
+    "ATS": {
+        "type": "programming",
+        "color": "#1ac620",
+        "aliases": [
+            "ats2"
+        ],
+        "extensions": [
+            ".dats",
+            ".hats",
+            ".sats"
+        ],
+        "tm_scope": "source.ats",
+        "ace_mode": "ocaml",
+        "language_id": 9,
+        "function_def": "fun myFunction(): void = { ... }",
+        "import_statement": "staload \"my_library.sats\"",
+        "print_statement": "print(\"my_text\")"
+    }
+},
+{
+    "ActionScript": {
+        "type": "programming",
+        "tm_scope": "source.actionscript.3",
+        "color": "#882B0F",
+        "aliases": [
+            "actionscript 3",
+            "actionscript3",
+            "as3"
+        ],
+        "extensions": [
+            ".as"
+        ],
+        "ace_mode": "actionscript",
+        "language_id": 10,
+        "function_def": "function myFunction(): void { }",
+        "import_statement": "import MyPackage.*;",
+        "print_statement": "trace(\"my_text\");"
+    }
+}
+
+]
