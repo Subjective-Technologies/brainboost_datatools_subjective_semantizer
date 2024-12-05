@@ -38,15 +38,19 @@ def main():
             topics = book.evaluate(keywords)
 
             print("Evaluation Results:")
-            for topic in topics:
-                print(f"ID: {topic['id']}")
-                print(f"Path: {topic['path']}")
-                print(f"Semantics: {topic['semantics']}")
-                print(f"Matched Keywords: {topic['matched_keywords']}")
-                print(f"Relevance Score: {topic['relevance_score']:.2f}")
-                print("-----------")
+            if not topics:
+                print("No topics matched the given keywords.")
+            else:
+                for topic in topics:
+                    print(f"ID: {topic['id']}")
+                    print(f"Path: {topic['path']}")
+                    print(f"Semantics: {topic['semantics']}")
+                    print(f"Matched Keywords: {topic['matched_keywords']}")
+                    print(f"Relevance Score: {topic['relevance_score']:.2f}")
+                    print("-----------")
 
     print("Processing complete.")
+
 
 if __name__ == "__main__":
     main()
