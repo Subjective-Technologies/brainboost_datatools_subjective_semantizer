@@ -16,7 +16,7 @@ from transformers import pipeline
 from com_worktwins_pipe.SemanticTreePipe import SemanticTreePipe
 from com_worktwins_pipe.SemanticNormalizationPipe import SemanticNormalizationPipe
 from com_worktwins_pipe.SourceCodeExtractorPipe import SourceCodeExtractorPipe
-from com_worktwins_pipe.WordFrequencesPipe import WordFrequencesPipe
+from com_worktwins_pipe.WordFrequenciesPipe import WordFrequenciesPipe
 from com_worktwins_pipe.ParagraphsPipe import ParagraphsPipe
 
 
@@ -30,13 +30,29 @@ BOOK_TOP_PERCENTILE = 0.9  # Top 10% of book frequency
 
 class PDFBook:
     def __init__(self, pdf_path):
-        """
-        Initialize the PDFBook class with the path to a PDF file.
-        """
         self.pdf_path = pdf_path
         self.name = os.path.splitext(os.path.basename(pdf_path))[0]
         self.output_dir = os.path.join(os.path.dirname(pdf_path), self.name)
         os.makedirs(self.output_dir, exist_ok=True)
+        self.book_frequency = None  # Initialize as None
+        self.english_frequency = None  # Initialize as None
+
+
+    def load_word_frequencies(self):
+        """
+        Load word frequency data from the WordFrequenciesPipe.json report.
+        """
+        word_freq_path = os.path.join(self.output_dir, f"{self.name}-WordFrequenciesPipe.json")
+
+        if not os.path.exists(word_freq_path):
+            raise FileNotFoundError(f"Word frequency data not found at {word_freq_path}. Ensure WordFrequenciesPipe has run.")
+
+        with open(word_freq_path, "r", encoding="utf-8") as wf_file:
+            word_frequencies = json.load(wf_file)
+            self.book_frequency = {item["word"]: item["book_frequency"] for item in word_frequencies}
+            self.english_frequency = {item["word"]: item["english_frequency"] for item in word_frequencies}
+
+
 
     def extract_raw(self):
         """
@@ -55,54 +71,37 @@ class PDFBook:
                     text_content.append(text)
                     bar()
 
+
+        # Write to the file
+        with open(os.path.join(self.output_dir + "/" + self.name + ".txt"), "w", encoding="utf-8") as f:
+            f.write("".join(text_content))
+
+
         return "\n\n".join(text_content)
 
 
 
     def evaluate(self, keywords):
         """
-        Evaluate the book for topics matching the given keywords using the semantic tree.
+        Evaluate the book for topics matching the given keywords using word frequencies.
         """
+        if self.book_frequency is None or self.english_frequency is None:
+            self.load_word_frequencies()  # Ensure frequencies are loaded
+
         # Normalize and sort keywords
         normalized_keywords = [kw.lower() for kw in keywords]
-        sorted_keywords = sorted(normalized_keywords, key=lambda kw: (
-            -self.book_freq_dict.get(kw, 0),  # Descending book frequency
-            self.english_freq_dict.get(kw, float('inf'))  # Ascending English frequency
-        ))
+        sorted_keywords = sorted(
+            normalized_keywords,
+            key=lambda kw: (
+                -self.book_frequency.get(kw, 0),  # Descending book frequency
+                self.english_frequency.get(kw, float('inf'))  # Ascending English frequency
+            ),
+        )
 
-        # Generate hash for the keyword combination
-        keyword_hash = hashlib.md5("".join(sorted_keywords).encode()).hexdigest()
-
-        # Search for the hash in the semantic tree
-        semantic_tree_path = os.path.join(self.output_dir, f"{self.name}_semantic_tree.json")
-        if not os.path.exists(semantic_tree_path):
-            raise FileNotFoundError("Semantic tree file not found. Ensure to_knowledge_hooks has been run.")
-
-        with open(semantic_tree_path, "r", encoding="utf-8") as f:
-            semantic_tree = json.load(f)
-
-        # Find the matching topic
-        matched_topic = semantic_tree.get(keyword_hash)
-
-        # Debug information
-        print("[DEBUG] No match found for keywords:", keywords)
-        print("[DEBUG] Normalized Keywords:", normalized_keywords)
-        print("[DEBUG] Sorted Keywords:", sorted_keywords)
-        print("[DEBUG] Generated Hash:", keyword_hash)
-
-        # If no match is found, return an empty list
-        if not matched_topic:
-            return []
-
-        # Format the result
-        return [{
-            "id": matched_topic["id"],
-            "path": matched_topic["path"],
-            "semantics": matched_topic["semantics"],
-            "matched_keywords": keywords,
-            "relevance_score": 1.0  # Placeholder for more complex relevance scoring
-        }]
-
+        # Further processing logic goes here...
+        print(f"Sorted keywords for evaluation: {sorted_keywords}")
+        # Placeholder for matching topics
+        return []
 
 
     def to_knowledge_hooks(self):
@@ -111,17 +110,28 @@ class PDFBook:
         """
         raw_text = self.extract_raw()
 
-        word_frequencies = WordFrequencesPipe(name=self.name,output_dir=self.output_dir).execute(input_data=raw_text)
+        # Step 1: Generate word frequencies
+        word_frequencies = WordFrequenciesPipe(name=self.name, output_dir=self.output_dir).execute(input_data=raw_text)
 
-        paragraphs = ParagraphsPipe(name=self.name,output_dir=self.output_dir,dependencies=[word_frequencies]).execute(input_data=raw_text)
-        code_blocks = SourceCodeExtractorPipe(name=self.name,output_dir=self.output_dir).execute(input_data=raw_text)
-        normalized_paragraphs = SemanticNormalizationPipe(name=self.name,output_dir=self.output_dir).execute(input_data=paragraphs)
-        semamtic_tree = SemanticTreePipe(name=self.name,output_dir=self.output_dir).execute(input_data=normalized_paragraphs)
+        # Step 2: Extract code snippets
+        code_snippets = SourceCodeExtractorPipe(name=self.name, output_dir=self.output_dir).execute(input_data=raw_text)
 
+        # Step 3: Process and enrich paragraphs
+        paragraphs = ParagraphsPipe(name=self.name, output_dir=self.output_dir).execute(input_data=raw_text)
 
+        # Step 4: Perform semantic normalization (include code snippets)
+        input_data_for_normalization = {
+            "enriched_paragraphs": paragraphs["enriched_paragraphs"],
+            "code_snippets": code_snippets["code_snippets"],
+        }
+        normalized_paragraphs = SemanticNormalizationPipe(name=self.name, output_dir=self.output_dir).execute(
+            input_data=input_data_for_normalization
+        )
 
-
-
-
-
+        # Step 5: Generate semantic tree
+        input_data_for_tree = {
+            "normalized_paragraphs": normalized_paragraphs["normalized_paragraphs"],
+            "book_frequencies": word_frequencies,
+        }
+        SemanticTreePipe(name=self.name, output_dir=self.output_dir).execute(input_data=input_data_for_tree)
 

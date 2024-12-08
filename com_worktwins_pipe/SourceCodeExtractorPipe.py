@@ -19,8 +19,8 @@ class SourceCodeExtractorPipe(Pipe):
         Returns:
             dict: JSON containing a list of extracted code snippets with metadata.
         """
-        raw_text = input_data.get("raw_text", "")
-        code_snippets = self.extract_code_snippets_v2(raw_text)
+
+        code_snippets = self.extract_code_snippets_v2(input_data)
         return {"code_snippets": code_snippets}
 
     @staticmethod

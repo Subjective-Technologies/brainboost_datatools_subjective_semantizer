@@ -9,7 +9,7 @@ class Pipe:
         self.name = name
         self.output_dir = output_dir
         self.dependencies = dependencies or []  # List of dependent pipes
-        self.output_file = os.path.join(output_dir, f"{self.name}.json")
+        self.output_file = os.path.join(output_dir, self.name + '-' + type(self).__name__ + '.json')
 
     def execute(self, input_data=None):
         """

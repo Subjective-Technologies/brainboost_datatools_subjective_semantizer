@@ -4,6 +4,7 @@ from hashlib import sha256
 from alive_progress import alive_bar
 from com_worktwins_pipe.Pipe import Pipe  # Import the base Pipe class
 import spacy  # For NLP sentence tokenization
+from com_worktwins_pipe.WordFrequenciesPipe import WordFrequenciesPipe
 
 # Load spaCy model
 nlp = spacy.load("en_core_web_sm")
@@ -24,17 +25,14 @@ class ParagraphsPipe(Pipe):
         Returns:
             dict: JSON with a list of enriched paragraphs.
         """
-        raw_text = input_data.get("raw_text", "")
-        book_freq_df = input_data.get("book_frequencies", None)
-
-        if book_freq_df is None:
-            raise ValueError("book_frequencies must be provided to enrich paragraphs.")
+        raw_text = input_data
 
         # Split raw text into paragraphs
         paragraphs = self.split_into_paragraphs(raw_text)
+        wordfreq = WordFrequenciesPipe(name=self.name,output_dir=self.output_dir).execute(input_data=raw_text)
 
         # Enrich paragraphs with keywords, sentences, and metadata
-        enriched_paragraphs = self.process_paragraphs(paragraphs, book_freq_df)
+        enriched_paragraphs = self.process_paragraphs(paragraphs, wordfreq)
 
         return {"enriched_paragraphs": enriched_paragraphs}
 

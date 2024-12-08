@@ -5,11 +5,94 @@ import torch
 from transformers import pipeline
 from alive_progress import alive_bar
 from com_worktwins_pipe.Pipe import Pipe  # Import the base Pipe class
+from transformers import pipeline
+import torch
 
 class SemanticNormalizationPipe(Pipe):
-    """
-    A Pipe subclass to normalize the semantics of enriched paragraphs using BART.
-    """
+
+
+
+    def __init__(self, name, output_dir):
+        super().__init__(name, output_dir)
+        device = 0 if torch.cuda.is_available() else -1
+        self.bart_model = pipeline("summarization", model="facebook/bart-large-cnn", device=device)
+        
+    def extract_semantics(self, enriched_paragraphs):
+        normalized_paragraphs = []
+        with alive_bar(len(enriched_paragraphs), title="Normalizing Semantics") as bar:
+            for para in enriched_paragraphs:
+                try:
+                    semantics = self.bart_model(para["text"], max_length=130, min_length=30, do_sample=False)[0]["summary_text"]
+                    normalized_paragraphs.append({
+                        "id": para["id"],
+                        "type": para["type"],
+                        "text": para["text"],
+                        "semantics": semantics,
+                        "keywords": para["keywords"],
+                        "weight": para["weight"],
+                        "sentences": para["sentences"],
+                    })
+                except Exception as e:
+                    print(f"Error normalizing paragraph {para['id']}: {e}")
+                finally:
+                    bar()
+        return normalized_paragraphs
+
+    def associate_code_with_paragraphs(self,raw_text, code_snippets):
+        """
+        Associates source code snippets with the paragraphs that introduce them.
+
+        Args:
+            raw_text (str): The original raw text of the document.
+            code_snippets (list): Extracted code snippets.
+
+        Returns:
+            dict: Mapping of paragraph IDs to associated source codes.
+        """
+        paragraphs = self.split_into_paragraphs(raw_text)
+        associations = {para["id"]: [] for para in paragraphs}
+
+        last_paragraph_id = None
+        for line in raw_text.split("\n"):
+            line = line.strip()
+            if not line:
+                continue
+            
+            # Check if the line is a paragraph
+            if not line.startswith(" "):  # Paragraphs don't have leading spaces
+                paragraph_id = hashlib.sha256(line.encode()).hexdigest()[:8]
+                last_paragraph_id = paragraph_id
+            
+            # Check if the line is a code snippet
+            if line.startswith("    ") or line.startswith("\t"):  # Code snippets are indented
+                code_snippet_id = hashlib.sha256(line.encode()).hexdigest()[:8]
+                snippet = next((code for code in code_snippets if code["id"] == code_snippet_id), None)
+                if snippet and last_paragraph_id:
+                    associations[last_paragraph_id].append(snippet)
+
+        return associations
+
+
+
+
+    @staticmethod
+    def is_relevant_snippet(paragraph_text, snippet_text):
+        """
+        Determines if a code snippet is relevant to a paragraph.
+
+        Args:
+            paragraph_text (str): Text of the paragraph.
+            snippet_text (str): Text of the code snippet.
+
+        Returns:
+            bool: True if the snippet is relevant, False otherwise.
+        """
+        # Simple heuristic: Check if any word in the snippet appears in the paragraph
+        paragraph_words = set(paragraph_text.lower().split())
+        snippet_words = set(snippet_text.lower().split())
+        return not paragraph_words.isdisjoint(snippet_words)
+
+
     def run(self, input_data):
         """
         Normalizes the semantics of enriched paragraphs.
@@ -21,41 +104,21 @@ class SemanticNormalizationPipe(Pipe):
             dict: JSON containing normalized paragraphs with a "semantics" field.
         """
         enriched_paragraphs = input_data.get("enriched_paragraphs", [])
-
         if not enriched_paragraphs:
             raise ValueError("Input data must contain 'enriched_paragraphs'.")
 
-        # Perform semantic normalization
-        normalized_paragraphs = self.extract_semantics(enriched_paragraphs)
-        return {"normalized_paragraphs": normalized_paragraphs}
-
-    def extract_semantics(self, enriched_paragraphs):
-        """
-        Normalize the knowledge of the book semantically using BART, outputting to a 'semantics' field.
-
-        Args:
-            enriched_paragraphs (list): List of enriched paragraphs to normalize.
-
-        Returns:
-            list: Normalized paragraphs with a 'semantics' field added.
-        """
-        # Use GPU if available
-        device = 0 if torch.cuda.is_available() else -1
-        bart_model = pipeline("summarization", model="facebook/bart-large-cnn", device=device)
-
+        # Normalize semantics
         normalized_paragraphs = []
         with alive_bar(len(enriched_paragraphs), title="Normalizing Semantics") as bar:
             for para in enriched_paragraphs:
                 try:
-                    # Normalize text using BART
-                    semantics = bart_model(para["text"], max_length=130, min_length=30, do_sample=False)[0]["summary_text"]
-
-                    # Include semantics field in the paragraph data
+                    # Use BART model for semantic normalization
+                    semantics = self.bart_model(para["text"], max_length=130, min_length=30, do_sample=False)[0]["summary_text"]
                     normalized_paragraphs.append({
                         "id": para["id"],
                         "type": para["type"],
-                        "text": para["text"],  # Original text
-                        "semantics": semantics,  # Added field
+                        "text": para["text"],
+                        "semantics": semantics,
                         "keywords": para["keywords"],
                         "weight": para["weight"],
                         "sentences": para["sentences"],
@@ -65,33 +128,4 @@ class SemanticNormalizationPipe(Pipe):
                 finally:
                     bar()
 
-        return normalized_paragraphs
-
-
-    
-    def generate_semantic_unit_id(self, keywords):
-        """
-        Generate a semantic unit ID based on keywords.
-        Keywords are sorted by book frequency (descending) and English frequency (ascending).
-        """
-        # Retrieve book and English frequencies
-        book_freq_path = os.path.join(self.output_dir, f"{self.name}_book_frequencies.json")
-        with open(book_freq_path, "r", encoding="utf-8") as f:
-            book_frequencies = {item["word"]: item["book_frequency"] for item in json.load(f)}
-
-        english_freq_path = os.path.join(self.output_dir, f"{self.name}_english_frequencies.json")
-        with open(english_freq_path, "r", encoding="utf-8") as f:
-            english_frequencies = {item["word"]: item["english_frequency"] for item in json.load(f)}
-
-        # Sort keywords by book frequency (desc) and English frequency (asc)
-        sorted_keywords = sorted(
-            keywords,
-            key=lambda x: (
-                -book_frequencies.get(x, 0),  # Descending book frequency
-                english_frequencies.get(x, float("inf"))  # Ascending English frequency
-            ),
-        )
-
-        # Generate a hash of the sorted keywords
-        keyword_string = "|".join(sorted_keywords)
-        return hashlib.sha256(keyword_string.encode()).hexdigest()[:16]  # Shorten hash for readability
+        return {"normalized_paragraphs": normalized_paragraphs}

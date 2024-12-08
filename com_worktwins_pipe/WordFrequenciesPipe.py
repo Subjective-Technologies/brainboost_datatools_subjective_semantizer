@@ -22,32 +22,45 @@ class WordFrequenciesPipe(Pipe):
         Returns:
             list: JSON-compatible list of words with frequencies.
         """
-        paragraphs = input_data.get("paragraphs", [])
-        combined_frequencies = self.generate_frequencies(paragraphs)
-        return combined_frequencies
+        word_frequencies = WordFrequenciesPipe.generate_frequencies(raw_text=input_data)
 
-    def generate_frequencies(self, paragraphs):
+        return word_frequencies
+
+    def generate_frequencies(raw_text):
         """
-        Generate word frequencies and related data from the paragraphs.
+        Generate word frequencies and related data directly from raw text.
 
         Args:
-            paragraphs (list): List of paragraph dictionaries, each containing an "id" and "text".
+            raw_text (str): Raw text extracted from a document.
 
         Returns:
             list: Combined frequencies sorted by book_frequency descending and english_frequency ascending.
         """
+        from collections import defaultdict
+        import pandas as pd
+        from wordfreq import word_frequency
+        from alive_progress import alive_bar
+
+        ENGLISH_TOP_PERCENTILE = 0.9  # Top 10% of English frequency
+        BOOK_TOP_PERCENTILE = 0.9  # Top 10% of book frequency
+
         word_counts = defaultdict(int)
         word_paragraph_map = defaultdict(set)
 
+        # Split text into paragraphs (based on double newlines)
+        paragraphs = raw_text.split("\n\n")
+
         # Count word occurrences and map them to paragraphs
         with alive_bar(len(paragraphs), title="Processing paragraphs") as bar:
-            for para in paragraphs:
-                pid = para["id"]
-                text = para["text"]
-                words = [word.lower() for word in text.split() if word.isalnum()]
+            for idx, para in enumerate(paragraphs):
+                para = para.strip()
+                if not para:
+                    continue
+
+                words = [word.lower() for word in para.split() if word.isalnum()]
                 for word in words:
                     word_counts[word] += 1
-                    word_paragraph_map[word].add(pid)
+                    word_paragraph_map[word].add(idx)
                 bar()
 
         # Create a DataFrame for book word frequencies
@@ -60,8 +73,8 @@ class WordFrequenciesPipe(Pipe):
         book_freq_df["english_frequency"] = book_freq_df["word"].apply(lambda word: word_frequency(word, "en"))
 
         # Exclude connector words based on thresholds
-        english_top_threshold = book_freq_df["english_frequency"].quantile(self.ENGLISH_TOP_PERCENTILE)
-        book_top_threshold = book_freq_df["book_frequency"].quantile(self.BOOK_TOP_PERCENTILE)
+        english_top_threshold = book_freq_df["english_frequency"].quantile(ENGLISH_TOP_PERCENTILE)
+        book_top_threshold = book_freq_df["book_frequency"].quantile(BOOK_TOP_PERCENTILE)
 
         excluded_words = book_freq_df[
             (book_freq_df["english_frequency"] >= english_top_threshold) &
