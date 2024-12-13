@@ -5,6 +5,8 @@ import torch
 from com_worktwins_pipe.Pipe import Pipe  # Import the base Pipe class
 from transformers import AutoTokenizer, AutoModel
 import sys
+import logging
+
 
 sys.path.append('/home/golden/.local/lib/python3.10/site-packages')
 
@@ -15,11 +17,20 @@ class SemanticTreePipe(Pipe):
     """
 
 
-    def __init__(self, name, output_dir, dependencies=None):
-        super().__init__(name, output_dir, dependencies)
-        self.model_name = "sentence-transformers/all-MiniLM-L6-v2"  # Alternative lightweight model
+    def __init__(self, name, output_dir, pdf_name, dependencies=None):
+        super().__init__(name, output_dir, pdf_name, dependencies)
+        self.model_name = "sentence-transformers/all-MiniLM-L6-v2"
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         self.model = AutoModel.from_pretrained(self.model_name)
+        self.pdf_name = pdf_name
+
+        # Configure logging
+        self.logger = logging.getLogger(self.name)
+        self.logger.setLevel(logging.INFO)
+        handler = logging.FileHandler(os.path.join(self.output_dir, f"{self.pdf_name}-{self.name}.log"))
+        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        handler.setFormatter(formatter)
+        self.logger.addHandler(handler)
     
     def embed_text(self, text):
         """
@@ -55,20 +66,20 @@ class SemanticTreePipe(Pipe):
         return similarity.item()
 
     def run(self, input_data):
-        """
-        Generates a semantic tree using embeddings for paragraphs.
-        """
+        self.logger.info("Starting SemanticTreePipe.run()")
         normalized_paragraphs = input_data.get("normalized_paragraphs", [])
         if not normalized_paragraphs:
+            self.logger.error("No 'normalized_paragraphs' found in input data.")
             raise ValueError("Input data must contain 'normalized_paragraphs'.")
 
         semantic_tree = {}
         for para in normalized_paragraphs:
             para_text = para.get("text", "")
             if not para_text:
+                self.logger.warning(f"Empty text for paragraph ID {para.get('id')}. Skipping.")
                 continue
 
-            # Example of semantic tree logic: embedding-based grouping
+            # Generate embedding
             embedding = self.embed_text(para_text)
             para_id = para["id"]
 
@@ -78,8 +89,9 @@ class SemanticTreePipe(Pipe):
                 "embedding": embedding.tolist()  # Store embedding as list
             }
 
+        self.logger.info("Semantic tree generation completed.")
         return {"semantic_tree": semantic_tree}
-    
+
 
 
     def generate_semantic_tree(self, normalized_paragraphs):
