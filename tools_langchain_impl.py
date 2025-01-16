@@ -1,136 +1,76 @@
-import json
-from langchain.embeddings import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
-
-# Load JSON Data
-def load_data(json_file):
-    with open(json_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    documents = []
-    for book, content in data.items():
-        for entry in content:
-            paragraph = entry["paragraph"]
-            metadata = {"book": book, "type": "paragraph"}
-            documents.append(Document(page_content=paragraph, metadata=metadata))
-            for sentence in entry["sentences"]:
-                metadata = {"book": book, "type": "sentence"}
-                documents.append(Document(page_content=sentence, metadata=metadata))
-    return documents
-
-# Build FAISS Index
-def build_index(documents):
-    embeddings = OpenAIEmbeddings()
-    vectorstore = FAISS.from_documents(documents, embeddings)
-    return vectorstore
-
-# Perform Search
-def semantic_search(vectorstore, query, k=5):
-    results = vectorstore.similarity_search(query, k=k)
-    return results
-
-# Main Function
-def main(json_file, query):
-    documents = load_data(json_file)
-    vectorstore = build_index(documents)
-    results = semantic_search(vectorstore, query)
-    print("Results:")
-    for result in results:
-        print(f"Content: {result.page_content}")
-        print(f"Metadata: {result.metadata}")
-
-
-
-
-
-import json
 import os
-from PyPDF2 import PdfReader
+from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.schema import Document
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
+from langchain.llms import OpenAI
 
-# Function to extract text from PDF
-def extract_text_from_pdf(pdf_path):
-    reader = PdfReader(pdf_path)
-    text = ""
-    for page in reader.pages:
-        text += page.extract_text()
-    return text
-
-# Function to split text into chunks
-def split_text_into_chunks(text, chunk_size=500, chunk_overlap=50):
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=chunk_size,
-        chunk_overlap=chunk_overlap,
-        separators=["\n\n", "\n", ".", " "]
-    )
-    chunks = text_splitter.split_text(text)
-    return chunks
-
-# Process PDF into JSON structure
-def process_pdf_to_json(pdf_path, output_json_path):
-    text = extract_text_from_pdf(pdf_path)
-    chunks = split_text_into_chunks(text)
-    paragraphs = []
-    for i, chunk in enumerate(chunks):
-        sentences = [sentence.strip() for sentence in chunk.split(".") if sentence.strip()]
-        paragraphs.append({"paragraph": chunk, "sentences": sentences})
-    
-    # Save to JSON
-    book_name = os.path.basename(pdf_path).replace(".pdf", "")
-    json_data = {book_name: paragraphs}
-    with open(output_json_path, "w", encoding="utf-8") as json_file:
-        json.dump(json_data, json_file, ensure_ascii=False, indent=4)
-    print(f"JSON saved to {output_json_path}")
-    return json_data
-
-# Build FAISS index for semantic similarity
-def build_faiss_index_from_json(json_data):
+# STEP 1: Load all PDFs from a folder and split them into chunks.
+def load_and_split_pdfs(pdf_folder: str):
     documents = []
-    for book, content in json_data.items():
-        for entry in content:
-            paragraph = entry["paragraph"]
-            metadata = {"book": book, "type": "paragraph"}
-            documents.append(Document(page_content=paragraph, metadata=metadata))
-            for sentence in entry["sentences"]:
-                metadata = {"book": book, "type": "sentence"}
-                documents.append(Document(page_content=sentence, metadata=metadata))
+    for filename in os.listdir(pdf_folder):
+        if filename.lower().endswith(".pdf"):
+            filepath = os.path.join(pdf_folder, filename)
+            loader = PyPDFLoader(filepath)
+            # load the pages of the PDF; each page is a document.
+            docs = loader.load()  
+            # Optionally, you can add metadata such as the book title (from filename)
+            for doc in docs:
+                doc.metadata["book"] = filename  # the book from which this chunk comes
+            documents.extend(docs)
     
-    embeddings = OpenAIEmbeddings()
+    # Now, split the documents into smaller chunks for finer-grained retrieval.
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+    split_docs = text_splitter.split_documents(documents)
+    return split_docs
+
+# STEP 2: Create a FAISS vector store from the document chunks.
+def create_vectorstore_from_docs(documents):
+    embeddings = OpenAIEmbeddings()  # Ensure you have OPENAI_API_KEY set in your environment.
     vectorstore = FAISS.from_documents(documents, embeddings)
     return vectorstore
 
-# Perform semantic similarity search
-def semantic_search(vectorstore, query, k=5):
-    results = vectorstore.similarity_search(query, k=k)
-    for result in results:
-        print(f"Content: {result.page_content}")
-        print(f"Metadata: {result.metadata}")
+# STEP 3: Use an LLM chain to infer the best matching topic.
+def identify_topic(query: str, vectorstore: FAISS) -> str:
+    # Retrieve the top k (e.g., 3) relevant chunks.
+    relevant_docs = vectorstore.similarity_search(query, k=3)
+    
+    # Combine the content of the retrieved chunks.
+    context = "\n\n".join(doc.page_content for doc in relevant_docs)
+    
+    # Build a prompt that informs the LLM about the multi-topic nature of the books.
+    prompt = (
+        "The documents below come from books that cover multiple topics. "
+        "Each passage may discuss a different subject. Based solely on the context given "
+        "and the user query, determine the name of the most relevant topic. "
+        "If the context is mixed, choose the topic that most directly addresses the user query.\n\n"
+        f"User Query: {query}\n\n"
+        f"Context:\n{context}\n\n"
+        "Answer with just a single topic name (or a very short phrase)."
+    )
+    
+    llm = OpenAI(temperature=0)
+    topic = llm(prompt)
+    return topic.strip()
 
-# Main Function
-def main(pdf_path, query):
-    json_path = pdf_path.replace(".pdf", ".json")
-    json_data = process_pdf_to_json(pdf_path, json_path)
-    vectorstore = build_faiss_index_from_json(json_data)
-    semantic_search(vectorstore, query)
+def main():
+    # Specify the folder where your PDFs are stored.
+    pdf_folder = "com_worktwins_data/books_pdf"  # <-- change this to your actual folder path
+    
+    print("Loading and splitting PDF documents...")
+    docs = load_and_split_pdfs(pdf_folder)
+    print(f"Loaded and split into {len(docs)} chunks.")
+    
+    print("Creating vector store from document chunks...")
+    vectorstore = create_vectorstore_from_docs(docs)
+    
+    # Get user input text
+    user_text = input("Enter your text: ")
+    
+    # Use the LLM chain to infer the best topic.
+    topic = identify_topic(user_text, vectorstore)
+    print("\nInferred Topic:")
+    print(topic)
 
-# Example Usage
 if __name__ == "__main__":
-    pdf_path = "example.pdf"  # Path to your PDF file
-    query = "Explain the concept of relativity."  # Query for semantic search
-    main(pdf_path, query)
-
-
-
-
-
-
-
-# Example Usage
-if __name__ == "__main__":
-    json_file = "books.json"  # Path to your JSON file
-    query = "Explain the concept of relativity."
-    main(json_file, query)
+    main()

@@ -525,7 +525,8 @@ class PdfBookViewer(QtWidgets.QMainWindow):
             return
 
         # Path to the script
-        script_path = os.path.join(os.getcwd(), "main.py")
+        script_path = os.path.join(os.getcwd(), "pdfs_to_knowlwdgehooks.py")
+        #script_path = '/brainboost/brainboost_data/data_tools/brainboost_datatools_subjective_semantizer/pdfs_to_knowlwdgehooks.py'
 
         if not os.path.exists(script_path):
             QtWidgets.QMessageBox.critical(
